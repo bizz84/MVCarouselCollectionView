@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MVCarouselCell" customModule="MVCarouselCollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-bD-wC3" customClass="MVCarouselCellScrollView" customModule="MVCarouselCollectionView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pey-Zt-VKe"/>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Pey-Zt-VKe" secondAttribute="bottom" id="LPd-LF-t6b"/>
+                        <constraint firstAttribute="trailing" secondItem="Pey-Zt-VKe" secondAttribute="trailing" id="lem-qo-oGC"/>
+                        <constraint firstItem="Pey-Zt-VKe" firstAttribute="leading" secondItem="bSM-bD-wC3" secondAttribute="leading" id="oLf-jy-Y3M"/>
+                        <constraint firstItem="Pey-Zt-VKe" firstAttribute="top" secondItem="bSM-bD-wC3" secondAttribute="top" id="qcI-xQ-iYt"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="imageView" destination="Pey-Zt-VKe" id="peH-Md-aPV"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bSM-bD-wC3" secondAttribute="bottom" id="B75-M8-A7w"/>
+                <constraint firstAttribute="trailing" secondItem="bSM-bD-wC3" secondAttribute="trailing" id="F7E-3S-4Fs"/>
+                <constraint firstItem="bSM-bD-wC3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HX3-7V-bLQ"/>
+                <constraint firstItem="bSM-bD-wC3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zh9-zI-DLe"/>
+            </constraints>
+            <connections>
+                <outlet property="scrollView" destination="bSM-bD-wC3" id="5hx-En-8dS"/>
+            </connections>
+        </view>
+    </objects>
+</document>
