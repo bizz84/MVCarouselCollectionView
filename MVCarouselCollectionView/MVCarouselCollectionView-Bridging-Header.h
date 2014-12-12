@@ -8,3 +8,4 @@
 
 #import "SDWebImageManager.h"
 #import "SDWebImageDownloader.h"
+#import "UIImageView+WebCache.h"

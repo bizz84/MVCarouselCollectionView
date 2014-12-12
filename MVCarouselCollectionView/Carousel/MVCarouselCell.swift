@@ -27,14 +27,16 @@ class MVCarouselCell: UICollectionViewCell {
             scrollView.imagePath = newValue
         }
     }
-    var image : UIImage? {
+    
+    var imageLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? {
         get {
-            return scrollView.image
+            return scrollView.imageLoad
         }
         set {
-            scrollView.image = newValue
+            scrollView.imageLoad = newValue
         }
     }
+
     func resetZoom() {
         scrollView.resetZoom()
     }

@@ -11,24 +11,16 @@ import UIKit
 class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
 
     var cellSize : CGSize = CGSizeZero
-    var imagePath : String = ""/* {
+    var imagePath : String = "" {
         didSet {
-            self.image = UIImage(named: imagePath)
-        }
-    }*/
-    
-    var image : UIImage? = nil {
-        didSet {
-            self.imageView.image = image
-            
-            //        if (self.imageView.image == nil) {
-            //            [self.activityIndicator startAnimating];
-            //        }
-
-            self.resetZoom()
+            self.imageLoad?(imageView : self.imageView, imagePath: imagePath, completion: {
+                (newImage) in
+                self.resetZoom()
+            })
         }
     }
-
+    var imageLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? = nil
+    
     @IBOutlet weak private var imageView : UIImageView!
     @IBOutlet weak private var activityIndicator : UIActivityIndicatorView!
 

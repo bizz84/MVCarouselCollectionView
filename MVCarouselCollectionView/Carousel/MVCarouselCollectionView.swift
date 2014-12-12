@@ -28,8 +28,7 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     var selectDelegate : MVCarouselCollectionViewDelegate?
     var currentPageIndex : Int = 0
     
-    // Take imagePath and completion block that will be called when the image is retrieved
-    var loadImage : (imagePath : NSString, completion: (imagePath: NSString, image: UIImage?) -> ()) -> () = imageWebURLLoader
+    var imageLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? = imageViewLoad
 
     private var clientDidRequestScroll : Bool = false
 
@@ -53,17 +52,9 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
 
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseID, forIndexPath: indexPath) as MVCarouselCell
         cell.cellSize = self.bounds.size
+        cell.imageLoad = self.imageLoad
         cell.imagePath = self.imagePaths[indexPath.row]
         
-        self.loadImage(imagePath: cell.imagePath) { (imagePath: NSString, image : UIImage?) in
-            if imagePath == cell.imagePath {
-                cell.image = image
-            }
-            else {
-                println("completed loading \(imagePath) for cell, but image is now \(cell.imagePath)")
-            }
-        }
-    
         // http://stackoverflow.com/questions/16960556/how-to-zoom-a-uiscrollview-inside-of-a-uicollectionviewcell
         if let gestureRecognizer = cell.scrollView.pinchGestureRecognizer {
             self.addGestureRecognizer(gestureRecognizer)

@@ -7,19 +7,20 @@
 //
 
 import UIKit
-
-
-var imageWebURLLoader : (imagePath : NSString, completion: (imagePath: NSString, image: UIImage?) -> ()) -> () = { (imagePath : NSString, completion: (imagePath: NSString, image: UIImage?) -> ()) in
-    
-    var url = NSURL(string: imagePath)
-    SDWebImageManager.sharedManager().downloadImageWithURL(url, options: nil, progress: nil, completed: { (image : UIImage?, error: NSError?, cacheType: SDImageCacheType, finished: Bool, imageURL: NSURL?) in
-    
-        completion(imagePath: imagePath, image: image)
-    })
-}
     
 var imageLocalLoader : (imagePath : NSString, completion: (imagePath: NSString, image: UIImage?) -> ()) -> () = { (imagePath : NSString, completion: (imagePath: NSString, image: UIImage?) -> ()) in
 
     var image = UIImage(named:imagePath)
     completion(imagePath: imagePath, image: image)
+}
+
+var imageViewLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ()) = {
+    (imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) in
+    
+    var url = NSURL(string: imagePath)
+    imageView.sd_setImageWithURL(url, completed: {
+        (image : UIImage?, error: NSError?, cacheType: SDImageCacheType, imageURL: NSURL?) in
+
+        completion(newImage: image != nil)
+    })
 }
