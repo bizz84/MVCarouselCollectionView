@@ -28,7 +28,7 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     var selectDelegate : MVCarouselCollectionViewDelegate?
     var currentPageIndex : Int = 0
     
-    var imageLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? = imageViewLoad
+    var imageLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())?
 
     private var clientDidRequestScroll : Bool = false
 
@@ -50,9 +50,14 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
+        // Should be set at this point
+        assert(imageLoad != nil)
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseID, forIndexPath: indexPath) as MVCarouselCell
         cell.cellSize = self.bounds.size
+        // Pass the closure to the cell
         cell.imageLoad = self.imageLoad
+        // Set image path, which will call closure
         cell.imagePath = self.imagePaths[indexPath.row]
         
         // http://stackoverflow.com/questions/16960556/how-to-zoom-a-uiscrollview-inside-of-a-uicollectionviewcell

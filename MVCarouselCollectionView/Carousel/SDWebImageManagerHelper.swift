@@ -8,13 +8,14 @@
 
 import UIKit
     
-var imageLocalLoader : (imagePath : NSString, completion: (imagePath: NSString, image: UIImage?) -> ()) -> () = { (imagePath : NSString, completion: (imagePath: NSString, image: UIImage?) -> ()) in
+var imageViewLoadCached : ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ()) = {
+    (imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) in
 
-    var image = UIImage(named:imagePath)
-    completion(imagePath: imagePath, image: image)
+    imageView.image = UIImage(named:imagePath)
+    completion(newImage: imageView.image != nil)
 }
 
-var imageViewLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ()) = {
+var imageViewLoadFromPath: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ()) = {
     (imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) in
     
     var url = NSURL(string: imagePath)

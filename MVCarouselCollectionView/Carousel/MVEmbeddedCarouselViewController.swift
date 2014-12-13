@@ -28,14 +28,14 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
         
         view.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.collectionView.selectDelegate = self
-        
+        self.collectionView.imageLoad = imageViewLoadFromPath
         self.imagePaths = [
             "https://farm4.staticflickr.com/3869/14537609860_c1ca6324c8_b_d.jpg",
             "https://farm6.staticflickr.com/5609/14994054683_62f40c1b37_b_d.jpg"
         ];
         
-        //self.imagePaths = [ @"MyOyster", "CameraCube", "PixelPicker", "PerfectGrid" ];
-
+//        self.collectionView.imageLoad = imageViewLoadCached
+//        self.imagePaths = [ "MyOyster", "CameraCube", "PixelPicker", "PerfectGrid" ];
     }
 
     func addAsChildViewController(parentViewController : UIViewController, attachToView parentView: UIView) {
