@@ -28,7 +28,7 @@ class MVFullScreenCarouselViewController: UIViewController, MVCarouselCollection
 
         // Do any additional setup after loading the view.
         self.collectionView.selectDelegate = self
-        self.collectionView.imageLoader = self.imageLoader
+        self.collectionView.commonImageLoader = self.imageLoader
         self.collectionView.imagePaths = self.imagePaths
         self.collectionView.reloadData()
     }

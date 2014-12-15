@@ -27,7 +27,7 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
         // Configure collection view
         self.collectionView.selectDelegate = self
         self.collectionView.imagePaths = imagePaths
-        self.collectionView.imageLoader = self.imageLoader
+        self.collectionView.commonImageLoader = self.imageLoader
         self.collectionView.reloadData()
     }
     

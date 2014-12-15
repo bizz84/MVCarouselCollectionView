@@ -10,6 +10,8 @@ import UIKit
 import Foundation
 
 @objc protocol MVCarouselCollectionViewDelegate {
+    // method to provide a custom loader for a cell
+    optional func imageLoaderForCell(atIndexPath indexPath: NSIndexPath, imagePath: String) -> MVImageLoaderClosure
     func didSelectCellAtIndexPath(indexPath: NSIndexPath)
     func didScrollToCellAtIndex(pageIndex : NSInteger)
 }
@@ -23,7 +25,8 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     var selectDelegate : MVCarouselCollectionViewDelegate?
     var currentPageIndex : Int = 0
     
-    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())?
+    // Default clousure used to load images
+    var commonImageLoader: MVImageLoaderClosure?
 
     private var clientDidRequestScroll : Bool = false
 
@@ -46,14 +49,17 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
         // Should be set at this point
-        assert(imageLoader != nil)
+        assert(commonImageLoader != nil)
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseID, forIndexPath: indexPath) as MVCarouselCell
         cell.cellSize = self.bounds.size
+        
         // Pass the closure to the cell
-        cell.imageLoader = self.imageLoader
+        let imagePath = self.imagePaths[indexPath.row]
+        var loader = self.selectDelegate?.imageLoaderForCell?(atIndexPath: indexPath, imagePath: imagePath)
+        cell.imageLoader = loader != nil ? loader : self.commonImageLoader
         // Set image path, which will call closure
-        cell.imagePath = self.imagePaths[indexPath.row]
+        cell.imagePath = imagePath
         
         // http://stackoverflow.com/questions/16960556/how-to-zoom-a-uiscrollview-inside-of-a-uicollectionviewcell
         if let gestureRecognizer = cell.scrollView.pinchGestureRecognizer {

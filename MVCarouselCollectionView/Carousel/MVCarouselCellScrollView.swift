@@ -8,18 +8,22 @@
 
 import UIKit
 
+// Image loader closure type
+typealias MVImageLoaderClosure = ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())
+
 class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
 
     var cellSize : CGSize = CGSizeZero
     var imagePath : String = "" {
         didSet {
+            assert(self.imageLoader != nil, "Image loader must be specified")
             self.imageLoader?(imageView : self.imageView, imagePath: imagePath, completion: {
                 (newImage) in
                 self.resetZoom()
             })
         }
     }
-    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? = nil
+    var imageLoader: MVImageLoaderClosure?
     
     @IBOutlet weak private var imageView : UIImageView!
     @IBOutlet weak private var activityIndicator : UIActivityIndicatorView!

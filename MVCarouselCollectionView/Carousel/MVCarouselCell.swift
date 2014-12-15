@@ -28,7 +28,7 @@ class MVCarouselCell: UICollectionViewCell {
         }
     }
     
-    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? {
+    var imageLoader: MVImageLoaderClosure? {
         get {
             return scrollView.imageLoader
         }
