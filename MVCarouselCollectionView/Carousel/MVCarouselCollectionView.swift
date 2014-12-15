@@ -19,16 +19,11 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     private let reuseID = "SomeReuseID"
     
     // MARK: Variables
-    var imagePaths : [String] = [] {
-        didSet {
-            self.reloadData()
-        }
-    }
-    
+    var imagePaths : [String] = []    
     var selectDelegate : MVCarouselCollectionViewDelegate?
     var currentPageIndex : Int = 0
     
-    var imageLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())?
+    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())?
 
     private var clientDidRequestScroll : Bool = false
 
@@ -51,12 +46,12 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
         // Should be set at this point
-        assert(imageLoad != nil)
+        assert(imageLoader != nil)
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseID, forIndexPath: indexPath) as MVCarouselCell
         cell.cellSize = self.bounds.size
         // Pass the closure to the cell
-        cell.imageLoad = self.imageLoad
+        cell.imageLoader = self.imageLoader
         // Set image path, which will call closure
         cell.imagePath = self.imagePaths[indexPath.row]
         
@@ -87,7 +82,7 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     // MARK: UICollectionViewDelegateFlowLayout
     func collectionView(collectionView : UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
     
-        return self.bounds.size
+        return self.superview!.bounds.size
     }
     
     func collectionView(collectionView : UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

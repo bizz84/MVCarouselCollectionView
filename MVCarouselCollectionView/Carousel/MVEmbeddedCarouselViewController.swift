@@ -10,12 +10,8 @@ import UIKit
 
 class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionViewDelegate, MVFullScreenCarouselViewControllerDelegate {
 
-    var imagePaths : [String] = [] {
-        didSet {
-            self.collectionView.imagePaths = imagePaths
-            self.pageControl.numberOfPages = imagePaths.count
-        }
-    }
+    var imagePaths : [String] = []
+    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())?
 
     @IBOutlet var collectionView : MVCarouselCollectionView!
     @IBOutlet var pageControl : MVCarouselPageControl!
@@ -25,19 +21,16 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
 
         // Do any additional setup after loading the view.
        
-        
         view.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.collectionView.selectDelegate = self
-        self.collectionView.imageLoad = imageViewLoadFromPath
-        self.imagePaths = [
-            "https://farm4.staticflickr.com/3869/14537609860_c1ca6324c8_b_d.jpg",
-            "https://farm6.staticflickr.com/5609/14994054683_62f40c1b37_b_d.jpg"
-        ];
-        
-//        self.collectionView.imageLoad = imageViewLoadCached
-//        self.imagePaths = [ "MyOyster", "CameraCube", "PixelPicker", "PerfectGrid" ];
-    }
 
+        self.pageControl.numberOfPages = imagePaths.count
+        // Configure collection view
+        self.collectionView.selectDelegate = self
+        self.collectionView.imagePaths = imagePaths
+        self.collectionView.imageLoader = self.imageLoader
+        self.collectionView.reloadData()
+    }
+    
     func addAsChildViewController(parentViewController : UIViewController, attachToView parentView: UIView) {
 
         parentViewController.addChildViewController(self)
@@ -59,8 +52,6 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
         parentView.addConstraint(
         NSLayoutConstraint(item:self.view, attribute:attribute, relatedBy:NSLayoutRelation.Equal, toItem:parentView, attribute:attribute, multiplier:1.0, constant:0))
     }
-    
-    
     
     // MARK:  MVCarouselCollectionViewDelegate
     func didSelectCellAtIndexPath(indexPath : NSIndexPath) {
@@ -87,6 +78,7 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
         
             var nc = segue.destinationViewController as? UINavigationController
             var vc = nc?.viewControllers[0] as? MVFullScreenCarouselViewController
+            vc?.imageLoader = self.imageLoader
             vc?.imagePaths = self.imagePaths
             vc?.initialViewIndex = (sender as NSIndexPath).row
             vc?.delegate = self

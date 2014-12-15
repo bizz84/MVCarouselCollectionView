@@ -13,13 +13,13 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
     var cellSize : CGSize = CGSizeZero
     var imagePath : String = "" {
         didSet {
-            self.imageLoad?(imageView : self.imageView, imagePath: imagePath, completion: {
+            self.imageLoader?(imageView : self.imageView, imagePath: imagePath, completion: {
                 (newImage) in
                 self.resetZoom()
             })
         }
     }
-    var imageLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? = nil
+    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? = nil
     
     @IBOutlet weak private var imageView : UIImageView!
     @IBOutlet weak private var activityIndicator : UIActivityIndicatorView!

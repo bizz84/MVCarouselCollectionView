@@ -28,12 +28,12 @@ class MVCarouselCell: UICollectionViewCell {
         }
     }
     
-    var imageLoad: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? {
+    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())? {
         get {
-            return scrollView.imageLoad
+            return scrollView.imageLoader
         }
         set {
-            scrollView.imageLoad = newValue
+            scrollView.imageLoader = newValue
         }
     }
 

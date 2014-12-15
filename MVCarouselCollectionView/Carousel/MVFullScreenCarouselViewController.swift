@@ -19,6 +19,7 @@ class MVFullScreenCarouselViewController: UIViewController, MVCarouselCollection
     weak var delegate : MVFullScreenCarouselViewControllerDelegate?
 
     var imagePaths : [String] = []
+    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())?
 
     @IBOutlet var collectionView : MVCarouselCollectionView!;
     
@@ -27,25 +28,15 @@ class MVFullScreenCarouselViewController: UIViewController, MVCarouselCollection
 
         // Do any additional setup after loading the view.
         self.collectionView.selectDelegate = self
-        
+        self.collectionView.imageLoader = self.imageLoader
         self.collectionView.imagePaths = self.imagePaths
-    }
-    
-    // MARK: MVCarouselCollectionViewDelegate
-    func didSelectCellAtIndexPath(indexPath : NSIndexPath) {
-    
-        self.delegate?.willCloseWithSelectedIndexPath(indexPath)
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func didScrollToCellAtIndex(pageIndex : NSInteger) {
-    
-    //DLogInfo(@"new page: %ld", (unsigned long)pageIndex);
+        self.collectionView.reloadData()
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     
+        //self.collectionView.reloadData()
         // Apparently on iOS 7 scrollToInitialIndex doesn't have an effect here. Using performSelector fixes it
         self.scrollToInitialIndex()
         //[self performSelector:@selector(scrollToInitialIndex) withObject:nil afterDelay:0];
@@ -57,6 +48,18 @@ class MVFullScreenCarouselViewController: UIViewController, MVCarouselCollection
         self.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition:UICollectionViewScrollPosition.CenteredHorizontally, animated: false)
     }
     
+    // MARK: MVCarouselCollectionViewDelegate
+    func didSelectCellAtIndexPath(indexPath : NSIndexPath) {
+        
+        self.delegate?.willCloseWithSelectedIndexPath(indexPath)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func didScrollToCellAtIndex(pageIndex : NSInteger) {
+        
+        //DLogInfo(@"new page: %ld", (unsigned long)pageIndex);
+    }
+
     @IBAction func closeButtonPressed(sender: AnyObject?) {
 
         var indexPath = NSIndexPath(forRow:self.collectionView.currentPageIndex, inSection: 0)
