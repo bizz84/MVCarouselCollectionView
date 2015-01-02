@@ -13,7 +13,10 @@ typealias MVImageLoaderClosure = ((imageView: UIImageView, imagePath : String, c
 
 class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
 
+    let MaximumZoom = 4.0
+    
     var cellSize : CGSize = CGSizeZero
+    var maximumZoom = 0.0
     var imagePath : String = "" {
         didSet {
             assert(self.imageLoader != nil, "Image loader must be specified")
@@ -62,7 +65,7 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
         // If image is taller, then make edge to edge height, else make edge to edge width
         var zoom = cellAspectRatioWiderThanImage ? cellSize.height / imageSize.height : cellSize.width / imageSize.width
         
-        self.maximumZoomScale = zoom * 4
+        self.maximumZoomScale = zoom * CGFloat(zoomToUse())
         self.minimumZoomScale = zoom
         self.zoomScale = zoom
         
@@ -75,6 +78,10 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
         self.contentInset = UIEdgeInsetsMake(vertContentInset, horzContentInset, vertContentInset, horzContentInset)
     
     //NSLog(@"imageSize: %@, contentSize: %@, content offset: %@, cell ratio %@ image ratio, inset(horz: %f, vert: %f)", NSStringFromCGSize(imageSize), NSStringFromCGSize(self.contentSize), NSStringFromCGPoint(self.contentOffset), cellAspectRatioWiderThanImage ? @">" : @"<", horzContentInset, vertContentInset);
+    }
+    
+    func zoomToUse() -> Double {
+        return maximumZoom < 1.0 ? MaximumZoom : maximumZoom
     }
 
     func viewForZoomingInScrollView(scrollView : UIScrollView) -> UIView {

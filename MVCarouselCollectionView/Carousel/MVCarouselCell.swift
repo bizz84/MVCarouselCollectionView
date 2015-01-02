@@ -19,6 +19,14 @@ class MVCarouselCell: UICollectionViewCell {
             scrollView.cellSize = newValue
         }
     }
+    var maximumZoom : Double {
+        get {
+            return scrollView.maximumZoom
+        }
+        set {
+            scrollView.maximumZoom = newValue
+        }
+    }
     var imagePath : String {
         get {
             return scrollView.imagePath

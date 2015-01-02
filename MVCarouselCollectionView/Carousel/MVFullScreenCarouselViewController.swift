@@ -30,6 +30,7 @@ class MVFullScreenCarouselViewController: UIViewController, MVCarouselCollection
         self.collectionView.selectDelegate = self
         self.collectionView.commonImageLoader = self.imageLoader
         self.collectionView.imagePaths = self.imagePaths
+        self.collectionView.maximumZoom = 4.0
         self.collectionView.reloadData()
     }
 

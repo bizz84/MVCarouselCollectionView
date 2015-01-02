@@ -24,6 +24,7 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     var imagePaths : [String] = []    
     var selectDelegate : MVCarouselCollectionViewDelegate?
     var currentPageIndex : Int = 0
+    var maximumZoom : Double = 0.0
     
     // Default clousure used to load images
     var commonImageLoader: MVImageLoaderClosure?
@@ -60,6 +61,7 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
         cell.imageLoader = loader != nil ? loader : self.commonImageLoader
         // Set image path, which will call closure
         cell.imagePath = imagePath
+        cell.maximumZoom = maximumZoom
         
         // http://stackoverflow.com/questions/16960556/how-to-zoom-a-uiscrollview-inside-of-a-uicollectionviewcell
         if let gestureRecognizer = cell.scrollView.pinchGestureRecognizer {

@@ -28,6 +28,7 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
         self.collectionView.selectDelegate = self
         self.collectionView.imagePaths = imagePaths
         self.collectionView.commonImageLoader = self.imageLoader
+        self.collectionView.maximumZoom = 1.0
         self.collectionView.reloadData()
     }
     
