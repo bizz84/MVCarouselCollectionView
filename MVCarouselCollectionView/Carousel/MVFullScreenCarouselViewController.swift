@@ -39,8 +39,7 @@ class MVFullScreenCarouselViewController: UIViewController, MVCarouselCollection
     
         //self.collectionView.reloadData()
         // Apparently on iOS 7 scrollToInitialIndex doesn't have an effect here. Using performSelector fixes it
-        self.scrollToInitialIndex()
-        //[self performSelector:@selector(scrollToInitialIndex) withObject:nil afterDelay:0];
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0.0, target: self, selector: Selector("scrollToInitialIndex"), userInfo: nil, repeats: false)
     }
     
     func scrollToInitialIndex() {
