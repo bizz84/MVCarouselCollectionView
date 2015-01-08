@@ -14,14 +14,14 @@
                         <viewControllerLayoutGuide type="bottom" id="J1Q-RM-OSl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KFO-fe-sZm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="395"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iga-pH-EF8" customClass="MVCarouselCollectionView" customModule="MVCarouselCollectionView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="213.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="iga-pH-EF8" secondAttribute="height" multiplier="1:1" id="jq5-Zg-oH9"/>
+                                    <constraint firstAttribute="width" secondItem="iga-pH-EF8" secondAttribute="height" multiplier="1.5:1" id="jq5-Zg-oH9"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kHR-Cg-q80">
                                     <size key="itemSize" width="50" height="50"/>
@@ -42,7 +42,10 @@
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="d5Y-b6-1jS" customClass="MVCarouselPageControl" customModule="MVCarouselCollectionView">
-                                <rect key="frame" x="141" y="320" width="39" height="37"/>
+                                <rect key="frame" x="141" y="213.5" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="AUg-P8-Squ"/>
+                                </constraints>
                                 <connections>
                                     <action selector="pageControlEventChanged:" destination="bRf-so-vuz" eventType="valueChanged" id="jc2-3k-ZNc"/>
                                 </connections>
@@ -54,11 +57,12 @@
                             <constraint firstAttribute="trailing" secondItem="iga-pH-EF8" secondAttribute="trailing" id="8Db-Ng-Pd4"/>
                             <constraint firstAttribute="centerX" secondItem="d5Y-b6-1jS" secondAttribute="centerX" id="Cvc-7g-20h"/>
                             <constraint firstItem="iga-pH-EF8" firstAttribute="leading" secondItem="KFO-fe-sZm" secondAttribute="leading" id="ZZK-7b-5KV"/>
+                            <constraint firstItem="J1Q-RM-OSl" firstAttribute="top" secondItem="d5Y-b6-1jS" secondAttribute="bottom" id="y2U-9y-aCz"/>
                             <constraint firstItem="d5Y-b6-1jS" firstAttribute="top" secondItem="iga-pH-EF8" secondAttribute="bottom" id="zGB-Q9-2Y0"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="395"/>
+                    <size key="freeformSize" width="320" height="251"/>
                     <connections>
                         <outlet property="collectionView" destination="iga-pH-EF8" id="fMn-Mx-Me1"/>
                         <outlet property="pageControl" destination="d5Y-b6-1jS" id="cg3-pl-LYu"/>

@@ -28,7 +28,7 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
         self.collectionView.selectDelegate = self
         self.collectionView.imagePaths = imagePaths
         self.collectionView.commonImageLoader = self.imageLoader
-        self.collectionView.maximumZoom = 1.0
+        self.collectionView.maximumZoom = 2.0
         self.collectionView.reloadData()
     }
     
@@ -89,6 +89,7 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
     // MARK: FullScreenViewControllerDelegate
     func willCloseWithSelectedIndexPath(indexPath: NSIndexPath) {
 
+        self.collectionView.resetZoom()
         self.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition:UICollectionViewScrollPosition.CenteredHorizontally, animated:false)
     }
 }

@@ -9,6 +9,11 @@
 import UIKit
 import Foundation
 
+/*
+ * TODO: Would be nice to support spacing between pages. The link below explains how to do this but
+ * the code sample needs to be converted to Auto Layout
+ * http://stackoverflow.com/questions/13228600/uicollectionview-align-logic-missing-in-horizontal-paging-scrollview
+ */
 @objc protocol MVCarouselCollectionViewDelegate {
     // method to provide a custom loader for a cell
     optional func imageLoaderForCell(atIndexPath indexPath: NSIndexPath, imagePath: String) -> MVImageLoaderClosure
@@ -29,6 +34,7 @@ class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UI
     // Default clousure used to load images
     var commonImageLoader: MVImageLoaderClosure?
 
+    // Trick to avoid updating the page index more than necessary
     private var clientDidRequestScroll : Bool = false
 
     // MARK: Initialisation

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7kI-ri-BiV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--2 Bed Flat for Sale-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVCarouselCollectionView" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,26 +17,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfM-Xp-CMY">
-                                <rect key="frame" x="150" y="60" width="300" height="340"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfM-Xp-CMY">
+                                <rect key="frame" x="0.0" y="124" width="600" height="340"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="CXl-by-6GU"/>
-                                    <constraint firstAttribute="height" constant="300" id="z5a-nM-n4l"/>
+                                    <constraint firstAttribute="height" constant="340" placeholder="YES" id="IYW-19-jM9"/>
                                 </constraints>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Circle, Queen Elizabeth Street, London SE1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNd-wb-rid">
+                                <rect key="frame" x="16" y="84" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£ 1.120.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry2-dV-DkX">
+                                <rect key="frame" x="255" y="484" width="90" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.023573720190000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gfM-Xp-CMY" firstAttribute="top" secondItem="vNd-wb-rid" secondAttribute="bottom" constant="20" id="4b6-p0-LYF"/>
                             <constraint firstAttribute="centerX" secondItem="gfM-Xp-CMY" secondAttribute="centerX" id="A4U-mJ-51y"/>
+                            <constraint firstItem="vNd-wb-rid" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GHz-pB-o8b"/>
+                            <constraint firstItem="gfM-Xp-CMY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KuX-ub-wp0"/>
                             <constraint firstItem="gfM-Xp-CMY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="60" id="RCy-oJ-sMT"/>
+                            <constraint firstAttribute="trailing" secondItem="gfM-Xp-CMY" secondAttribute="trailing" id="ShY-OV-WLX"/>
+                            <constraint firstItem="vNd-wb-rid" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TWP-nR-DT8"/>
+                            <constraint firstItem="ry2-dV-DkX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="Ufw-go-4m0"/>
+                            <constraint firstItem="ry2-dV-DkX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="X7l-zA-5GF"/>
+                            <constraint firstAttribute="centerX" secondItem="ry2-dV-DkX" secondAttribute="centerX" id="eEM-mS-9eU"/>
+                            <constraint firstItem="vNd-wb-rid" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hWA-Lu-6sp"/>
+                            <constraint firstItem="ry2-dV-DkX" firstAttribute="top" secondItem="gfM-Xp-CMY" secondAttribute="bottom" constant="20" id="wJR-bD-ajg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RCy-oJ-sMT"/>
+                                <exclude reference="Ufw-go-4m0"/>
+                                <exclude reference="X7l-zA-5GF"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="2 Bed Flat for Sale" id="Syy-PL-TJW"/>
                     <connections>
                         <outlet property="containerView" destination="gfM-Xp-CMY" id="sFS-2q-pNx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1023" y="-331"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yuf-1e-VHW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7kI-ri-BiV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W0r-24-W79">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eTa-VJ-G2c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wd8-jc-Erg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-331"/>
         </scene>
     </scenes>
 </document>
