@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3EDEE2188EC943887F3A491C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DC4600873CA775489EEB8F /* libPods.a */; };
-		651A74831A38D09E00FD6EB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74821A38D09E00FD6EB4 /* AppDelegate.swift */; };
-		651A74851A38D09E00FD6EB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74841A38D09E00FD6EB4 /* ViewController.swift */; };
-		651A74881A38D09E00FD6EB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651A74861A38D09E00FD6EB4 /* Main.storyboard */; };
-		651A748A1A38D09E00FD6EB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651A74891A38D09E00FD6EB4 /* Images.xcassets */; };
-		651A748D1A38D09E00FD6EB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651A748B1A38D09E00FD6EB4 /* LaunchScreen.xib */; };
 		651A74991A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74981A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.swift */; };
-		651A74B11A38D0B700FD6EB4 /* CarouselStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651A74A31A38D0B700FD6EB4 /* CarouselStoryboard.storyboard */; };
-		651A74BA1A38D47700FD6EB4 /* Carousel.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651A74B91A38D47700FD6EB4 /* Carousel.xcassets */; };
-		651A74C01A38EE9D00FD6EB4 /* MVCarouselCellScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74BF1A38EE9D00FD6EB4 /* MVCarouselCellScrollView.swift */; };
-		651A74C21A38F3C800FD6EB4 /* MVCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651A74C11A38F3C800FD6EB4 /* MVCarouselCell.xib */; };
-		651A74C41A38F49300FD6EB4 /* MVCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74C31A38F49300FD6EB4 /* MVCarouselCell.swift */; };
-		651A74C61A38FC9100FD6EB4 /* MVCarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74C51A38FC9100FD6EB4 /* MVCarouselCollectionView.swift */; };
-		651A74C81A3A2CCE00FD6EB4 /* SDWebImageManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74C71A3A2CCE00FD6EB4 /* SDWebImageManagerHelper.swift */; };
-		651A74CA1A3AD92000FD6EB4 /* MVCarouselPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74C91A3AD92000FD6EB4 /* MVCarouselPageControl.swift */; };
-		651A74CC1A3AD9B800FD6EB4 /* MVEmbeddedCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74CB1A3AD9B800FD6EB4 /* MVEmbeddedCarouselViewController.swift */; };
-		651A74CE1A3ADE8B00FD6EB4 /* MVFullScreenCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74CD1A3ADE8B00FD6EB4 /* MVFullScreenCarouselViewController.swift */; };
+		6523A0DE1A5E7D3300D6CDA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0C91A5E7D3300D6CDA4 /* AppDelegate.swift */; };
+		6523A0DF1A5E7D3300D6CDA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0CB1A5E7D3300D6CDA4 /* LaunchScreen.xib */; };
+		6523A0E01A5E7D3300D6CDA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0CD1A5E7D3300D6CDA4 /* Main.storyboard */; };
+		6523A0E11A5E7D3300D6CDA4 /* CarouselStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0D01A5E7D3300D6CDA4 /* CarouselStoryboard.storyboard */; };
+		6523A0E61A5E7D3300D6CDA4 /* MVCarouselPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0D51A5E7D3300D6CDA4 /* MVCarouselPageControl.swift */; };
+		6523A0E71A5E7D3300D6CDA4 /* MVEmbeddedCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0D61A5E7D3300D6CDA4 /* MVEmbeddedCarouselViewController.swift */; };
+		6523A0E81A5E7D3300D6CDA4 /* MVFullScreenCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0D71A5E7D3300D6CDA4 /* MVFullScreenCarouselViewController.swift */; };
+		6523A0E91A5E7D3300D6CDA4 /* SDWebImageManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0D81A5E7D3300D6CDA4 /* SDWebImageManagerHelper.swift */; };
+		6523A0EA1A5E7D3300D6CDA4 /* Carousel.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0D91A5E7D3300D6CDA4 /* Carousel.xcassets */; };
+		6523A0EB1A5E7D3300D6CDA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0DA1A5E7D3300D6CDA4 /* Images.xcassets */; };
+		6523A0ED1A5E7D3300D6CDA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0DD1A5E7D3300D6CDA4 /* ViewController.swift */; };
+		6523A0F31A5E7DF900D6CDA4 /* MVCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0EF1A5E7DF900D6CDA4 /* MVCarouselCell.swift */; };
+		6523A0F41A5E7DF900D6CDA4 /* MVCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0F01A5E7DF900D6CDA4 /* MVCarouselCell.xib */; };
+		6523A0F51A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0F11A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift */; };
+		6523A0F61A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0F21A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,26 +39,26 @@
 /* Begin PBXFileReference section */
 		16206DB97F195883C69BD5F8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCarouselCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		651A74811A38D09E00FD6EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		651A74821A38D09E00FD6EB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		651A74841A38D09E00FD6EB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		651A74871A38D09E00FD6EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		651A74891A38D09E00FD6EB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		651A748C1A38D09E00FD6EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		651A74921A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVCarouselCollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		651A74971A38D09E00FD6EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		651A74981A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCarouselCollectionViewTests.swift; sourceTree = "<group>"; };
-		651A74A31A38D0B700FD6EB4 /* CarouselStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CarouselStoryboard.storyboard; sourceTree = "<group>"; };
-		651A74B91A38D47700FD6EB4 /* Carousel.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Carousel.xcassets; sourceTree = "<group>"; };
-		651A74BE1A38D56F00FD6EB4 /* MVCarouselCollectionView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVCarouselCollectionView-Bridging-Header.h"; sourceTree = "<group>"; };
-		651A74BF1A38EE9D00FD6EB4 /* MVCarouselCellScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCellScrollView.swift; sourceTree = "<group>"; };
-		651A74C11A38F3C800FD6EB4 /* MVCarouselCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVCarouselCell.xib; sourceTree = "<group>"; };
-		651A74C31A38F49300FD6EB4 /* MVCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCell.swift; sourceTree = "<group>"; };
-		651A74C51A38FC9100FD6EB4 /* MVCarouselCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCollectionView.swift; sourceTree = "<group>"; };
-		651A74C71A3A2CCE00FD6EB4 /* SDWebImageManagerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDWebImageManagerHelper.swift; sourceTree = "<group>"; };
-		651A74C91A3AD92000FD6EB4 /* MVCarouselPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselPageControl.swift; sourceTree = "<group>"; };
-		651A74CB1A3AD9B800FD6EB4 /* MVEmbeddedCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVEmbeddedCarouselViewController.swift; sourceTree = "<group>"; };
-		651A74CD1A3ADE8B00FD6EB4 /* MVFullScreenCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVFullScreenCarouselViewController.swift; sourceTree = "<group>"; };
+		6523A0C91A5E7D3300D6CDA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6523A0CC1A5E7D3300D6CDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		6523A0CE1A5E7D3300D6CDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		6523A0D01A5E7D3300D6CDA4 /* CarouselStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CarouselStoryboard.storyboard; sourceTree = "<group>"; };
+		6523A0D51A5E7D3300D6CDA4 /* MVCarouselPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselPageControl.swift; sourceTree = "<group>"; };
+		6523A0D61A5E7D3300D6CDA4 /* MVEmbeddedCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVEmbeddedCarouselViewController.swift; sourceTree = "<group>"; };
+		6523A0D71A5E7D3300D6CDA4 /* MVFullScreenCarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVFullScreenCarouselViewController.swift; sourceTree = "<group>"; };
+		6523A0D81A5E7D3300D6CDA4 /* SDWebImageManagerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDWebImageManagerHelper.swift; sourceTree = "<group>"; };
+		6523A0D91A5E7D3300D6CDA4 /* Carousel.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Carousel.xcassets; sourceTree = "<group>"; };
+		6523A0DA1A5E7D3300D6CDA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6523A0DB1A5E7D3300D6CDA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6523A0DC1A5E7D3300D6CDA4 /* MVCarouselCollectionView-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVCarouselCollectionView-Bridging-Header.h"; sourceTree = "<group>"; };
+		6523A0DD1A5E7D3300D6CDA4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6523A0EF1A5E7DF900D6CDA4 /* MVCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCell.swift; sourceTree = "<group>"; };
+		6523A0F01A5E7DF900D6CDA4 /* MVCarouselCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVCarouselCell.xib; sourceTree = "<group>"; };
+		6523A0F11A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCellScrollView.swift; sourceTree = "<group>"; };
+		6523A0F21A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCollectionView.swift; sourceTree = "<group>"; };
 		C8DC4600873CA775489EEB8F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E299D0688AD3C378D7F15DB1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +85,7 @@
 		651A74741A38D09E00FD6EB4 = {
 			isa = PBXGroup;
 			children = (
+				6523A0C81A5E7CD700D6CDA4 /* MVCarouselCollectionViewDemo */,
 				651A747F1A38D09E00FD6EB4 /* MVCarouselCollectionView */,
 				651A74951A38D09E00FD6EB4 /* MVCarouselCollectionViewTests */,
 				651A747E1A38D09E00FD6EB4 /* Products */,
@@ -105,25 +106,12 @@
 		651A747F1A38D09E00FD6EB4 /* MVCarouselCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				651A74A21A38D0B700FD6EB4 /* Carousel */,
-				651A74821A38D09E00FD6EB4 /* AppDelegate.swift */,
-				651A74841A38D09E00FD6EB4 /* ViewController.swift */,
-				651A74861A38D09E00FD6EB4 /* Main.storyboard */,
-				651A74891A38D09E00FD6EB4 /* Images.xcassets */,
-				651A748B1A38D09E00FD6EB4 /* LaunchScreen.xib */,
-				651A74801A38D09E00FD6EB4 /* Supporting Files */,
-				651A74B91A38D47700FD6EB4 /* Carousel.xcassets */,
-				651A74BE1A38D56F00FD6EB4 /* MVCarouselCollectionView-Bridging-Header.h */,
+				6523A0EF1A5E7DF900D6CDA4 /* MVCarouselCell.swift */,
+				6523A0F01A5E7DF900D6CDA4 /* MVCarouselCell.xib */,
+				6523A0F11A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift */,
+				6523A0F21A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift */,
 			);
 			path = MVCarouselCollectionView;
-			sourceTree = "<group>";
-		};
-		651A74801A38D09E00FD6EB4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				651A74811A38D09E00FD6EB4 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		651A74951A38D09E00FD6EB4 /* MVCarouselCollectionViewTests */ = {
@@ -143,20 +131,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		651A74A21A38D0B700FD6EB4 /* Carousel */ = {
+		6523A0C81A5E7CD700D6CDA4 /* MVCarouselCollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				651A74A31A38D0B700FD6EB4 /* CarouselStoryboard.storyboard */,
-				651A74C31A38F49300FD6EB4 /* MVCarouselCell.swift */,
-				651A74C11A38F3C800FD6EB4 /* MVCarouselCell.xib */,
-				651A74BF1A38EE9D00FD6EB4 /* MVCarouselCellScrollView.swift */,
-				651A74C51A38FC9100FD6EB4 /* MVCarouselCollectionView.swift */,
-				651A74C71A3A2CCE00FD6EB4 /* SDWebImageManagerHelper.swift */,
-				651A74C91A3AD92000FD6EB4 /* MVCarouselPageControl.swift */,
-				651A74CB1A3AD9B800FD6EB4 /* MVEmbeddedCarouselViewController.swift */,
-				651A74CD1A3ADE8B00FD6EB4 /* MVFullScreenCarouselViewController.swift */,
+				6523A0CF1A5E7D3300D6CDA4 /* Carousel */,
+				6523A0C91A5E7D3300D6CDA4 /* AppDelegate.swift */,
+				6523A0DD1A5E7D3300D6CDA4 /* ViewController.swift */,
+				6523A0CB1A5E7D3300D6CDA4 /* LaunchScreen.xib */,
+				6523A0CD1A5E7D3300D6CDA4 /* Main.storyboard */,
+				6523A0D91A5E7D3300D6CDA4 /* Carousel.xcassets */,
+				6523A0DA1A5E7D3300D6CDA4 /* Images.xcassets */,
+				6523A0EE1A5E7D4900D6CDA4 /* Supporting Files */,
+			);
+			path = MVCarouselCollectionViewDemo;
+			sourceTree = "<group>";
+		};
+		6523A0CF1A5E7D3300D6CDA4 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				6523A0D01A5E7D3300D6CDA4 /* CarouselStoryboard.storyboard */,
+				6523A0D51A5E7D3300D6CDA4 /* MVCarouselPageControl.swift */,
+				6523A0D61A5E7D3300D6CDA4 /* MVEmbeddedCarouselViewController.swift */,
+				6523A0D71A5E7D3300D6CDA4 /* MVFullScreenCarouselViewController.swift */,
+				6523A0D81A5E7D3300D6CDA4 /* SDWebImageManagerHelper.swift */,
 			);
 			path = Carousel;
+			sourceTree = "<group>";
+		};
+		6523A0EE1A5E7D4900D6CDA4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6523A0DC1A5E7D3300D6CDA4 /* MVCarouselCollectionView-Bridging-Header.h */,
+				6523A0DB1A5E7D3300D6CDA4 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		B06A1B266C1EC04B2B6A1E82 /* Pods */ = {
@@ -258,12 +266,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				651A74881A38D09E00FD6EB4 /* Main.storyboard in Resources */,
-				651A748D1A38D09E00FD6EB4 /* LaunchScreen.xib in Resources */,
-				651A748A1A38D09E00FD6EB4 /* Images.xcassets in Resources */,
-				651A74B11A38D0B700FD6EB4 /* CarouselStoryboard.storyboard in Resources */,
-				651A74C21A38F3C800FD6EB4 /* MVCarouselCell.xib in Resources */,
-				651A74BA1A38D47700FD6EB4 /* Carousel.xcassets in Resources */,
+				6523A0EA1A5E7D3300D6CDA4 /* Carousel.xcassets in Resources */,
+				6523A0E01A5E7D3300D6CDA4 /* Main.storyboard in Resources */,
+				6523A0F41A5E7DF900D6CDA4 /* MVCarouselCell.xib in Resources */,
+				6523A0DF1A5E7D3300D6CDA4 /* LaunchScreen.xib in Resources */,
+				6523A0EB1A5E7D3300D6CDA4 /* Images.xcassets in Resources */,
+				6523A0E11A5E7D3300D6CDA4 /* CarouselStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,15 +322,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				651A74CE1A3ADE8B00FD6EB4 /* MVFullScreenCarouselViewController.swift in Sources */,
-				651A74C01A38EE9D00FD6EB4 /* MVCarouselCellScrollView.swift in Sources */,
-				651A74851A38D09E00FD6EB4 /* ViewController.swift in Sources */,
-				651A74831A38D09E00FD6EB4 /* AppDelegate.swift in Sources */,
-				651A74C41A38F49300FD6EB4 /* MVCarouselCell.swift in Sources */,
-				651A74CA1A3AD92000FD6EB4 /* MVCarouselPageControl.swift in Sources */,
-				651A74CC1A3AD9B800FD6EB4 /* MVEmbeddedCarouselViewController.swift in Sources */,
-				651A74C81A3A2CCE00FD6EB4 /* SDWebImageManagerHelper.swift in Sources */,
-				651A74C61A38FC9100FD6EB4 /* MVCarouselCollectionView.swift in Sources */,
+				6523A0F31A5E7DF900D6CDA4 /* MVCarouselCell.swift in Sources */,
+				6523A0E71A5E7D3300D6CDA4 /* MVEmbeddedCarouselViewController.swift in Sources */,
+				6523A0E81A5E7D3300D6CDA4 /* MVFullScreenCarouselViewController.swift in Sources */,
+				6523A0ED1A5E7D3300D6CDA4 /* ViewController.swift in Sources */,
+				6523A0F51A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift in Sources */,
+				6523A0DE1A5E7D3300D6CDA4 /* AppDelegate.swift in Sources */,
+				6523A0E61A5E7D3300D6CDA4 /* MVCarouselPageControl.swift in Sources */,
+				6523A0E91A5E7D3300D6CDA4 /* SDWebImageManagerHelper.swift in Sources */,
+				6523A0F61A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,20 +353,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		651A74861A38D09E00FD6EB4 /* Main.storyboard */ = {
+		6523A0CB1A5E7D3300D6CDA4 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				651A74871A38D09E00FD6EB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		651A748B1A38D09E00FD6EB4 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				651A748C1A38D09E00FD6EB4 /* Base */,
+				6523A0CC1A5E7D3300D6CDA4 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		6523A0CD1A5E7D3300D6CDA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6523A0CE1A5E7D3300D6CDA4 /* Base */,
+			);
+			name = Main.storyboard;
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -454,10 +464,10 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MVCarouselCollectionView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVCarouselCollectionViewDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MVCarouselCollectionView/MVCarouselCollectionView-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MVCarouselCollectionViewDemo/MVCarouselCollectionView-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -472,10 +482,10 @@
 					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MVCarouselCollectionView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MVCarouselCollectionViewDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MVCarouselCollectionView/MVCarouselCollectionView-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MVCarouselCollectionViewDemo/MVCarouselCollectionView-Bridging-Header.h";
 			};
 			name = Release;
 		};
