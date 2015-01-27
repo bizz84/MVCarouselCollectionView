@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'MVCarouselCollectionView/*.*'
 
+  s.screenshots  = ["https://github.com/bizz84/MVCarouselCollectionView/raw/master/screenshot.png"]
+
   s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
 
   s.requires_arc = true
