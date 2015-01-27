@@ -15,10 +15,18 @@ Features
 ![MVSlidingSegmentedControl preview](https://github.com/bizz84/MVSlidingSegmentedControl/raw/master/screenshot.png "MVSlidingSegmentedControl preview")
 --->
 
-Usage
+Installation
 -------------------------------------------------------
 
-A sample application demonstrating the usage MVCarouselCollectionView is included.
+If you are using Cocoapods, simply add this line to your Podfile:
+
+<pre>
+pod 'MVCarouselCollectionView'
+</pre>
+
+Requirements
+-------------------------------------------------------
+MVCarouselCollectionView requires iOS 8.0 or greater.
 
 <!---
 Notes
