@@ -79,10 +79,13 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
         
             var nc = segue.destinationViewController as? UINavigationController
             var vc = nc?.viewControllers[0] as? MVFullScreenCarouselViewController
-            vc?.imageLoader = self.imageLoader
-            vc?.imagePaths = self.imagePaths
-            vc?.initialViewIndex = (sender as NSIndexPath).row
-            vc?.delegate = self
+            if let vc = vc {
+                vc.imageLoader = self.imageLoader
+                vc.imagePaths = self.imagePaths
+                vc.initialViewIndex = (sender as NSIndexPath).row
+                vc.delegate = self
+                //vc.title = self.parentViewController?.title
+            }
         }
     }
     
