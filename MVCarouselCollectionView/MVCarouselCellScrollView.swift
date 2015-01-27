@@ -29,15 +29,12 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
     var imageLoader: MVImageLoaderClosure?
     
     @IBOutlet weak private var imageView : UIImageView!
-    @IBOutlet weak private var activityIndicator : UIActivityIndicatorView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.delegate = self
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
-        
-        //self.activityIndicator.color = UIColor.blackColor()
     }
 
     func resetZoom() {
@@ -76,8 +73,6 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
         var vertContentInset = !cellAspectRatioWiderThanImage ? 0.5 * (cellSize.height - adjustedContentHeight) : 0.0
     
         self.contentInset = UIEdgeInsetsMake(vertContentInset, horzContentInset, vertContentInset, horzContentInset)
-    
-    //NSLog(@"imageSize: %@, contentSize: %@, content offset: %@, cell ratio %@ image ratio, inset(horz: %f, vert: %f)", NSStringFromCGSize(imageSize), NSStringFromCGSize(self.contentSize), NSStringFromCGPoint(self.contentOffset), cellAspectRatioWiderThanImage ? @">" : @"<", horzContentInset, vertContentInset);
     }
     
     func zoomToUse() -> Double {
