@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3EDEE2188EC943887F3A491C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DC4600873CA775489EEB8F /* libPods.a */; };
-		651A74991A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651A74981A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.swift */; };
 		6523A0DE1A5E7D3300D6CDA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0C91A5E7D3300D6CDA4 /* AppDelegate.swift */; };
 		6523A0DF1A5E7D3300D6CDA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0CB1A5E7D3300D6CDA4 /* LaunchScreen.xib */; };
 		6523A0E01A5E7D3300D6CDA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0CD1A5E7D3300D6CDA4 /* Main.storyboard */; };
@@ -26,22 +25,22 @@
 		6523A0F61A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0F21A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		651A74931A38D09E00FD6EB4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 651A74751A38D09E00FD6EB4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 651A747C1A38D09E00FD6EB4;
-			remoteInfo = MVCarouselCollectionView;
+/* Begin PBXCopyFilesBuildPhase section */
+		654A754F1A78686400F0E6D2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		16206DB97F195883C69BD5F8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCarouselCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		651A74921A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVCarouselCollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		651A74971A38D09E00FD6EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		651A74981A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCarouselCollectionViewTests.swift; sourceTree = "<group>"; };
 		6523A0C91A5E7D3300D6CDA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6523A0CC1A5E7D3300D6CDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		6523A0CE1A5E7D3300D6CDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -72,13 +71,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		651A748F1A38D09E00FD6EB4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,7 +79,6 @@
 			children = (
 				6523A0C81A5E7CD700D6CDA4 /* MVCarouselCollectionViewDemo */,
 				651A747F1A38D09E00FD6EB4 /* MVCarouselCollectionView */,
-				651A74951A38D09E00FD6EB4 /* MVCarouselCollectionViewTests */,
 				651A747E1A38D09E00FD6EB4 /* Products */,
 				B06A1B266C1EC04B2B6A1E82 /* Pods */,
 				C20030B4EA39EA34D55AC518 /* Frameworks */,
@@ -98,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionView.app */,
-				651A74921A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,23 +102,6 @@
 				6523A0F21A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift */,
 			);
 			path = MVCarouselCollectionView;
-			sourceTree = "<group>";
-		};
-		651A74951A38D09E00FD6EB4 /* MVCarouselCollectionViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				651A74981A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.swift */,
-				651A74961A38D09E00FD6EB4 /* Supporting Files */,
-			);
-			path = MVCarouselCollectionViewTests;
-			sourceTree = "<group>";
-		};
-		651A74961A38D09E00FD6EB4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				651A74971A38D09E00FD6EB4 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6523A0C81A5E7CD700D6CDA4 /* MVCarouselCollectionViewDemo */ = {
@@ -196,6 +169,7 @@
 				651A747A1A38D09E00FD6EB4 /* Frameworks */,
 				651A747B1A38D09E00FD6EB4 /* Resources */,
 				D730EE7B8FB510555AA5C27D /* Copy Pods Resources */,
+				654A754F1A78686400F0E6D2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,24 +179,6 @@
 			productName = MVCarouselCollectionView;
 			productReference = 651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionView.app */;
 			productType = "com.apple.product-type.application";
-		};
-		651A74911A38D09E00FD6EB4 /* MVCarouselCollectionViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 651A749F1A38D09E00FD6EB4 /* Build configuration list for PBXNativeTarget "MVCarouselCollectionViewTests" */;
-			buildPhases = (
-				651A748E1A38D09E00FD6EB4 /* Sources */,
-				651A748F1A38D09E00FD6EB4 /* Frameworks */,
-				651A74901A38D09E00FD6EB4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				651A74941A38D09E00FD6EB4 /* PBXTargetDependency */,
-			);
-			name = MVCarouselCollectionViewTests;
-			productName = MVCarouselCollectionViewTests;
-			productReference = 651A74921A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -235,10 +191,6 @@
 				TargetAttributes = {
 					651A747C1A38D09E00FD6EB4 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					651A74911A38D09E00FD6EB4 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 651A747C1A38D09E00FD6EB4;
 					};
 				};
 			};
@@ -256,7 +208,6 @@
 			projectRoot = "";
 			targets = (
 				651A747C1A38D09E00FD6EB4 /* MVCarouselCollectionView */,
-				651A74911A38D09E00FD6EB4 /* MVCarouselCollectionViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,13 +223,6 @@
 				6523A0DF1A5E7D3300D6CDA4 /* LaunchScreen.xib in Resources */,
 				6523A0EB1A5E7D3300D6CDA4 /* Images.xcassets in Resources */,
 				6523A0E11A5E7D3300D6CDA4 /* CarouselStoryboard.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		651A74901A38D09E00FD6EB4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,23 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		651A748E1A38D09E00FD6EB4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				651A74991A38D09E00FD6EB4 /* MVCarouselCollectionViewTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		651A74941A38D09E00FD6EB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 651A747C1A38D09E00FD6EB4 /* MVCarouselCollectionView */;
-			targetProxy = 651A74931A38D09E00FD6EB4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6523A0CB1A5E7D3300D6CDA4 /* LaunchScreen.xib */ = {
@@ -489,40 +417,6 @@
 			};
 			name = Release;
 		};
-		651A74A01A38D09E00FD6EB4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MVCarouselCollectionViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVCarouselCollectionView.app/MVCarouselCollectionView";
-			};
-			name = Debug;
-		};
-		651A74A11A38D09E00FD6EB4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MVCarouselCollectionViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVCarouselCollectionView.app/MVCarouselCollectionView";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -540,15 +434,6 @@
 			buildConfigurations = (
 				651A749D1A38D09E00FD6EB4 /* Debug */,
 				651A749E1A38D09E00FD6EB4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		651A749F1A38D09E00FD6EB4 /* Build configuration list for PBXNativeTarget "MVCarouselCollectionViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				651A74A01A38D09E00FD6EB4 /* Debug */,
-				651A74A11A38D09E00FD6EB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
