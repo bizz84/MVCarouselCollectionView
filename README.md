@@ -5,7 +5,7 @@ UICollectionView-based image carousel written in Swift
 Preview
 -------------------------------------------------------
 
-![MVCarouselCollectionView preview](https://github.com/bizz84/MVCarouselCollectionView/raw/master/screenshot.png "MVCarouselCollectionView preview")
+![MVCarouselCollectionView preview](https://github.com/bizz84/MVCarouselCollectionView/raw/master/preview.gif "MVCarouselCollectionView preview")
 
 Features
 -------------------------------------------------------
