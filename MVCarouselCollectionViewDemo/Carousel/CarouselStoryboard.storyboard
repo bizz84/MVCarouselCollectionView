@@ -8,7 +8,7 @@
         <!--Embedded Carousel View Controller-->
         <scene sceneID="JGA-iW-xL9">
             <objects>
-                <viewController storyboardIdentifier="MVEmbeddedCarouselViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bRf-so-vuz" customClass="MVEmbeddedCarouselViewController" customModule="MVCarouselCollectionView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MVEmbeddedCarouselViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bRf-so-vuz" customClass="MVEmbeddedCarouselViewController" customModule="MVCarouselCollectionViewDemo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u0i-Op-Py5"/>
                         <viewControllerLayoutGuide type="bottom" id="J1Q-RM-OSl"/>
@@ -30,7 +30,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellReuseID" id="tm4-T8-g68">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellReuseID" id="tm4-T8-g68" customClass="MVCarouselCell" customModule="MVCarouselCollectionView">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

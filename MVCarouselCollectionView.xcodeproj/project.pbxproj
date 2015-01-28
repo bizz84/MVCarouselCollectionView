@@ -19,11 +19,28 @@
 		6523A0EA1A5E7D3300D6CDA4 /* Carousel.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0D91A5E7D3300D6CDA4 /* Carousel.xcassets */; };
 		6523A0EB1A5E7D3300D6CDA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0DA1A5E7D3300D6CDA4 /* Images.xcassets */; };
 		6523A0ED1A5E7D3300D6CDA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0DD1A5E7D3300D6CDA4 /* ViewController.swift */; };
-		6523A0F31A5E7DF900D6CDA4 /* MVCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0EF1A5E7DF900D6CDA4 /* MVCarouselCell.swift */; };
-		6523A0F41A5E7DF900D6CDA4 /* MVCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0F01A5E7DF900D6CDA4 /* MVCarouselCell.xib */; };
-		6523A0F51A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0F11A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift */; };
-		6523A0F61A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0F21A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift */; };
+		654A755B1A786CF400F0E6D2 /* MVCarouselCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 654A755A1A786CF400F0E6D2 /* MVCarouselCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		654A756D1A786CF400F0E6D2 /* MVCarouselCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A75561A786CF400F0E6D2 /* MVCarouselCollectionView.framework */; };
+		654A756E1A786CF400F0E6D2 /* MVCarouselCollectionView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 654A75561A786CF400F0E6D2 /* MVCarouselCollectionView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		654A75751A786DAF00F0E6D2 /* MVCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0EF1A5E7DF900D6CDA4 /* MVCarouselCell.swift */; };
+		654A75761A786DC300F0E6D2 /* MVCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0F01A5E7DF900D6CDA4 /* MVCarouselCell.xib */; };
+		654A75771A786DCC00F0E6D2 /* MVCarouselCellScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0F11A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift */; };
+		654A75781A786DD200F0E6D2 /* MVCarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0F21A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift */; };
+		654A757D1A78DC3900F0E6D2 /* MVCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0EF1A5E7DF900D6CDA4 /* MVCarouselCell.swift */; };
+		654A757E1A78DC3E00F0E6D2 /* MVCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0F01A5E7DF900D6CDA4 /* MVCarouselCell.xib */; };
+		654A757F1A78DC4200F0E6D2 /* MVCarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0F21A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift */; };
+		654A75801A78DC4400F0E6D2 /* MVCarouselCellScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0F11A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		654A756B1A786CF400F0E6D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 651A74751A38D09E00FD6EB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 654A75551A786CF400F0E6D2;
+			remoteInfo = MVCarouselCollectionView;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		654A754F1A78686400F0E6D2 /* Embed Frameworks */ = {
@@ -32,6 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				654A756E1A786CF400F0E6D2 /* MVCarouselCollectionView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,7 +58,7 @@
 
 /* Begin PBXFileReference section */
 		16206DB97F195883C69BD5F8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCarouselCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCarouselCollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6523A0C91A5E7D3300D6CDA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6523A0CC1A5E7D3300D6CDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		6523A0CE1A5E7D3300D6CDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +76,9 @@
 		6523A0F01A5E7DF900D6CDA4 /* MVCarouselCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVCarouselCell.xib; sourceTree = "<group>"; };
 		6523A0F11A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCellScrollView.swift; sourceTree = "<group>"; };
 		6523A0F21A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCollectionView.swift; sourceTree = "<group>"; };
+		654A75561A786CF400F0E6D2 /* MVCarouselCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MVCarouselCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		654A75591A786CF400F0E6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654A755A1A786CF400F0E6D2 /* MVCarouselCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCarouselCollectionView.h; sourceTree = "<group>"; };
 		C8DC4600873CA775489EEB8F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E299D0688AD3C378D7F15DB1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +88,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654A756D1A786CF400F0E6D2 /* MVCarouselCollectionView.framework in Frameworks */,
 				3EDEE2188EC943887F3A491C /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A75521A786CF400F0E6D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +108,7 @@
 			children = (
 				6523A0C81A5E7CD700D6CDA4 /* MVCarouselCollectionViewDemo */,
 				651A747F1A38D09E00FD6EB4 /* MVCarouselCollectionView */,
+				654A75571A786CF400F0E6D2 /* MVCarouselCollectionView */,
 				651A747E1A38D09E00FD6EB4 /* Products */,
 				B06A1B266C1EC04B2B6A1E82 /* Pods */,
 				C20030B4EA39EA34D55AC518 /* Frameworks */,
@@ -88,7 +118,8 @@
 		651A747E1A38D09E00FD6EB4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionView.app */,
+				651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionViewDemo.app */,
+				654A75561A786CF400F0E6D2 /* MVCarouselCollectionView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +171,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		654A75571A786CF400F0E6D2 /* MVCarouselCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				654A755A1A786CF400F0E6D2 /* MVCarouselCollectionView.h */,
+				654A75581A786CF400F0E6D2 /* Supporting Files */,
+			);
+			path = MVCarouselCollectionView;
+			sourceTree = "<group>";
+		};
+		654A75581A786CF400F0E6D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				654A75591A786CF400F0E6D2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B06A1B266C1EC04B2B6A1E82 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,10 +207,21 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		654A75531A786CF400F0E6D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654A755B1A786CF400F0E6D2 /* MVCarouselCollectionView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		651A747C1A38D09E00FD6EB4 /* MVCarouselCollectionView */ = {
+		651A747C1A38D09E00FD6EB4 /* MVCarouselCollectionViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 651A749C1A38D09E00FD6EB4 /* Build configuration list for PBXNativeTarget "MVCarouselCollectionView" */;
+			buildConfigurationList = 651A749C1A38D09E00FD6EB4 /* Build configuration list for PBXNativeTarget "MVCarouselCollectionViewDemo" */;
 			buildPhases = (
 				9BCDDCB94D2112F88B4F6AC1 /* Check Pods Manifest.lock */,
 				651A74791A38D09E00FD6EB4 /* Sources */,
@@ -174,11 +233,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				654A756C1A786CF400F0E6D2 /* PBXTargetDependency */,
+			);
+			name = MVCarouselCollectionViewDemo;
+			productName = MVCarouselCollectionView;
+			productReference = 651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		654A75551A786CF400F0E6D2 /* MVCarouselCollectionView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654A756F1A786CF400F0E6D2 /* Build configuration list for PBXNativeTarget "MVCarouselCollectionView" */;
+			buildPhases = (
+				654A75511A786CF400F0E6D2 /* Sources */,
+				654A75521A786CF400F0E6D2 /* Frameworks */,
+				654A75531A786CF400F0E6D2 /* Headers */,
+				654A75541A786CF400F0E6D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
 			);
 			name = MVCarouselCollectionView;
 			productName = MVCarouselCollectionView;
-			productReference = 651A747D1A38D09E00FD6EB4 /* MVCarouselCollectionView.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 654A75561A786CF400F0E6D2 /* MVCarouselCollectionView.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -191,6 +269,9 @@
 				TargetAttributes = {
 					651A747C1A38D09E00FD6EB4 = {
 						CreatedOnToolsVersion = 6.1;
+					};
+					654A75551A786CF400F0E6D2 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
@@ -207,7 +288,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				651A747C1A38D09E00FD6EB4 /* MVCarouselCollectionView */,
+				651A747C1A38D09E00FD6EB4 /* MVCarouselCollectionViewDemo */,
+				654A75551A786CF400F0E6D2 /* MVCarouselCollectionView */,
 			);
 		};
 /* End PBXProject section */
@@ -219,10 +301,18 @@
 			files = (
 				6523A0EA1A5E7D3300D6CDA4 /* Carousel.xcassets in Resources */,
 				6523A0E01A5E7D3300D6CDA4 /* Main.storyboard in Resources */,
-				6523A0F41A5E7DF900D6CDA4 /* MVCarouselCell.xib in Resources */,
+				654A757E1A78DC3E00F0E6D2 /* MVCarouselCell.xib in Resources */,
 				6523A0DF1A5E7D3300D6CDA4 /* LaunchScreen.xib in Resources */,
 				6523A0EB1A5E7D3300D6CDA4 /* Images.xcassets in Resources */,
 				6523A0E11A5E7D3300D6CDA4 /* CarouselStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A75541A786CF400F0E6D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654A75761A786DC300F0E6D2 /* MVCarouselCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,19 +356,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6523A0F31A5E7DF900D6CDA4 /* MVCarouselCell.swift in Sources */,
+				654A75801A78DC4400F0E6D2 /* MVCarouselCellScrollView.swift in Sources */,
+				654A757D1A78DC3900F0E6D2 /* MVCarouselCell.swift in Sources */,
+				654A757F1A78DC4200F0E6D2 /* MVCarouselCollectionView.swift in Sources */,
 				6523A0E71A5E7D3300D6CDA4 /* MVEmbeddedCarouselViewController.swift in Sources */,
 				6523A0E81A5E7D3300D6CDA4 /* MVFullScreenCarouselViewController.swift in Sources */,
 				6523A0ED1A5E7D3300D6CDA4 /* ViewController.swift in Sources */,
-				6523A0F51A5E7DF900D6CDA4 /* MVCarouselCellScrollView.swift in Sources */,
 				6523A0DE1A5E7D3300D6CDA4 /* AppDelegate.swift in Sources */,
 				6523A0E61A5E7D3300D6CDA4 /* MVCarouselPageControl.swift in Sources */,
 				6523A0E91A5E7D3300D6CDA4 /* SDWebImageManagerHelper.swift in Sources */,
-				6523A0F61A5E7DF900D6CDA4 /* MVCarouselCollectionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A75511A786CF400F0E6D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654A75771A786DCC00F0E6D2 /* MVCarouselCellScrollView.swift in Sources */,
+				654A75751A786DAF00F0E6D2 /* MVCarouselCell.swift in Sources */,
+				654A75781A786DD200F0E6D2 /* MVCarouselCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		654A756C1A786CF400F0E6D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 654A75551A786CF400F0E6D2 /* MVCarouselCollectionView */;
+			targetProxy = 654A756B1A786CF400F0E6D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6523A0CB1A5E7D3300D6CDA4 /* LaunchScreen.xib */ = {
@@ -417,6 +525,46 @@
 			};
 			name = Release;
 		};
+		654A75701A786CF400F0E6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MVCarouselCollectionView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		654A75711A786CF400F0E6D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MVCarouselCollectionView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		651A749C1A38D09E00FD6EB4 /* Build configuration list for PBXNativeTarget "MVCarouselCollectionView" */ = {
+		651A749C1A38D09E00FD6EB4 /* Build configuration list for PBXNativeTarget "MVCarouselCollectionViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				651A749D1A38D09E00FD6EB4 /* Debug */,
@@ -437,6 +585,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		654A756F1A786CF400F0E6D2 /* Build configuration list for PBXNativeTarget "MVCarouselCollectionView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654A75701A786CF400F0E6D2 /* Debug */,
+				654A75711A786CF400F0E6D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
