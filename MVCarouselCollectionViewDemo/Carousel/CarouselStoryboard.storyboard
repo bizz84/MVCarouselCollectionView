@@ -76,7 +76,7 @@
         <!--Full Screen Carousel View Controller-->
         <scene sceneID="DdU-aK-9Ag">
             <objects>
-                <viewController storyboardIdentifier="MVFullScreenCarouselViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGD-AO-MAe" customClass="MVFullScreenCarouselViewController" customModule="MVCarouselCollectionView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MVFullScreenCarouselViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fGD-AO-MAe" customClass="MVFullScreenCarouselViewController" customModule="MVCarouselCollectionViewDemo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NdI-Bk-WjV"/>
                         <viewControllerLayoutGuide type="bottom" id="w3S-pi-qFb"/>
