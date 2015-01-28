@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.homepage     = 'https://github.com/bizz84/MVCarouselCollectionView'
   s.author       = { 'Andrea Bizzotto' => 'bizz84@gmail.com' }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source       = { :git => "https://github.com/bizz84/MVCarouselCollectionView.git", :tag => s.version }
 
