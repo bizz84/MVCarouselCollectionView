@@ -32,6 +32,8 @@ Alternatively, you can install this as a git submodule by following these steps:
 Usage
 -------------------------------------------------------
 
+Below is a sample implementation of a view controller using MVCarouselCollectionView. See the demo application for a more advanced usage example.
+
 <pre>
 class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate {
 
@@ -76,7 +78,7 @@ class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate
 
 Requirements
 -------------------------------------------------------
-MVCarouselCollectionView requires iOS 8.0 or greater.
+MVCarouselCollectionView was tested under XCode 6.1 and requires iOS 8.0 or greater.
 
 
 License
