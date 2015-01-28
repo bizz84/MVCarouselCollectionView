@@ -41,7 +41,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="d5Y-b6-1jS" customClass="MVCarouselPageControl" customModule="MVCarouselCollectionView">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="d5Y-b6-1jS" customClass="MVCarouselPageControl" customModule="MVCarouselCollectionViewDemo">
                                 <rect key="frame" x="141" y="213.5" width="39" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="AUg-P8-Squ"/>

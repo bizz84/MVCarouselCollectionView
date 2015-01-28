@@ -19,7 +19,7 @@
 		6523A0EA1A5E7D3300D6CDA4 /* Carousel.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0D91A5E7D3300D6CDA4 /* Carousel.xcassets */; };
 		6523A0EB1A5E7D3300D6CDA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0DA1A5E7D3300D6CDA4 /* Images.xcassets */; };
 		6523A0ED1A5E7D3300D6CDA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0DD1A5E7D3300D6CDA4 /* ViewController.swift */; };
-		654A75B11A78DF6900F0E6D2 /* MVCarouselCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654A75B01A78DF6900F0E6D2 /* MVCarouselCollectionView.framework */; };
+		657E120D1A78E907002A9756 /* MVCarouselCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657E120C1A78E907002A9756 /* MVCarouselCollectionView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,7 +51,7 @@
 		6523A0DB1A5E7D3300D6CDA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6523A0DC1A5E7D3300D6CDA4 /* MVCarouselCollectionView-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVCarouselCollectionView-Bridging-Header.h"; sourceTree = "<group>"; };
 		6523A0DD1A5E7D3300D6CDA4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		654A75B01A78DF6900F0E6D2 /* MVCarouselCollectionView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MVCarouselCollectionView.framework; path = "build/Debug-iphoneos/MVCarouselCollectionView.framework"; sourceTree = "<group>"; };
+		657E120C1A78E907002A9756 /* MVCarouselCollectionView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MVCarouselCollectionView.framework; path = "build/Debug-iphoneos/MVCarouselCollectionView.framework"; sourceTree = "<group>"; };
 		C8DC4600873CA775489EEB8F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E299D0688AD3C378D7F15DB1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654A75B11A78DF6900F0E6D2 /* MVCarouselCollectionView.framework in Frameworks */,
+				657E120D1A78E907002A9756 /* MVCarouselCollectionView.framework in Frameworks */,
 				3EDEE2188EC943887F3A491C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +135,7 @@
 		C20030B4EA39EA34D55AC518 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				654A75B01A78DF6900F0E6D2 /* MVCarouselCollectionView.framework */,
+				657E120C1A78E907002A9756 /* MVCarouselCollectionView.framework */,
 				C8DC4600873CA775489EEB8F /* libPods.a */,
 			);
 			name = Frameworks;

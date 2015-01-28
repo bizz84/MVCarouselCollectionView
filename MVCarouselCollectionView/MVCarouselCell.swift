@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MVCarouselCell: UICollectionViewCell {
+public class MVCarouselCell: UICollectionViewCell {
  
     @IBOutlet weak var scrollView : MVCarouselCellScrollView!
     var cellSize : CGSize {

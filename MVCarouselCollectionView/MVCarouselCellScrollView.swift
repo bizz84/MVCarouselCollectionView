@@ -9,9 +9,9 @@
 import UIKit
 
 // Image loader closure type
-typealias MVImageLoaderClosure = ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())
+public typealias MVImageLoaderClosure = ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())
 
-class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
+public class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
 
     let MaximumZoom = 4.0
     
@@ -30,14 +30,14 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
     
     @IBOutlet weak private var imageView : UIImageView!
 
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         
         self.delegate = self
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
     }
 
-    func resetZoom() {
+    public func resetZoom() {
         if self.imageView.image == nil {
             return
         }
@@ -75,7 +75,7 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
         self.contentInset = UIEdgeInsetsMake(vertContentInset, horzContentInset, vertContentInset, horzContentInset)
     }
     
-    func zoomToUse() -> Double {
+    public func zoomToUse() -> Double {
         return maximumZoom < 1.0 ? MaximumZoom : maximumZoom
     }
 

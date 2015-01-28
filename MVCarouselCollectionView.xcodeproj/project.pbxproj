@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		654A75921A78DE8D00F0E6D2 /* MVCarouselCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 654A75911A78DE8D00F0E6D2 /* MVCarouselCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		654A75AC1A78DF2000F0E6D2 /* MVCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A75A81A78DF2000F0E6D2 /* MVCarouselCell.swift */; };
 		654A75AD1A78DF2000F0E6D2 /* MVCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654A75A91A78DF2000F0E6D2 /* MVCarouselCell.xib */; };
 		654A75AE1A78DF2000F0E6D2 /* MVCarouselCellScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A75AA1A78DF2000F0E6D2 /* MVCarouselCellScrollView.swift */; };
@@ -79,7 +78,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654A75921A78DE8D00F0E6D2 /* MVCarouselCollectionView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
