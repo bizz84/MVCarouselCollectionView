@@ -23,6 +23,50 @@ If you are using Cocoapods, simply add the line below to your Podfile, then type
 pod 'MVCarouselCollectionView'
 </pre>
 
+Usage
+-------------------------------------------------------
+
+<pre>
+class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate {
+
+    // Local images
+    var imagePaths : [ "image1.png", "image2.png", "image3.png" ]
+    // Closure to load local images with UIImage.named
+    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ()) = {
+      (imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) in
+
+        imageView.image = UIImage(named:imagePath)
+        completion(newImage: imageView.image != nil)
+    }
+
+    @IBOutlet var collectionView : MVCarouselCollectionView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        configureCollectionView()
+    }
+    
+    func configureCollectionView() {
+    
+        collectionView.selectDelegate = self
+        collectionView.imagePaths = imagePaths
+        collectionView.commonImageLoader = self.imageLoader
+        collectionView.maximumZoom = 2.0
+        collectionView.reloadData()
+    }
+    // MARK:  MVCarouselCollectionViewDelegate
+    func didSelectCellAtIndexPath(indexPath : NSIndexPath) {
+    
+        // Do something with cell selection
+    }
+    
+    func didScrollToCellAtIndex(pageIndex: NSInteger) {
+    
+        // Page changed, can use this to update page control
+    }
+}
+</pre>
 
 Requirements
 -------------------------------------------------------
