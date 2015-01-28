@@ -23,6 +23,12 @@ If you are using Cocoapods, simply add the line below to your Podfile, then type
 pod 'MVCarouselCollectionView'
 </pre>
 
+Alternatively, you can install this as a git submodule by following these steps:
+
+* git submodule add https://github.com/bizz84/MVCarouselCollectionView.git
+* Drag the MVCarouselCollectionView.xcodeproj file into your XCode project
+* Under the main app target, open the **General tab** and add MVCarouselCollectionView under the **Embedded Binaries** section
+
 Usage
 -------------------------------------------------------
 
