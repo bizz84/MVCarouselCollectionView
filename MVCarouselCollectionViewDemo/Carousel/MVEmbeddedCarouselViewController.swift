@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MVCarouselCollectionView
 
 class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionViewDelegate, MVFullScreenCarouselViewControllerDelegate {
 
