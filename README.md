@@ -65,13 +65,13 @@ class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate
         collectionView.reloadData()
     }
     // MARK:  MVCarouselCollectionViewDelegate
-    func didSelectCellAtIndexPath(indexPath : NSIndexPath) {
-    
+    func carousel(carousel: MVCarouselCollectionView, didSelectCellAtIndexPath indexPath: NSIndexPath) {
+
         // Do something with cell selection
     }
     
-    func didScrollToCellAtIndex(pageIndex: NSInteger) {
-    
+    func carousel(carousel: MVCarouselCollectionView, didScrollToCellAtIndex cellIndex : NSInteger) {
+
         // Page changed, can use this to update page control
     }
 }
