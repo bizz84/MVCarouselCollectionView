@@ -31,20 +31,20 @@ import Foundation
 @objc public protocol MVCarouselCollectionViewDelegate {
     // method to provide a custom loader for a cell
     optional func imageLoaderForCell(atIndexPath indexPath: NSIndexPath, imagePath: String) -> MVImageLoaderClosure
-    func didSelectCellAtIndexPath(indexPath: NSIndexPath)
-    func didScrollToCellAtIndex(pageIndex : NSInteger)
+    func carousel(carousel: MVCarouselCollectionView, didSelectCellAtIndexPath indexPath: NSIndexPath)
+    func carousel(carousel: MVCarouselCollectionView, didScrollToCellAtIndex cellIndex : NSInteger)
 }
 
 public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
- 
+
     private let reuseID = "SomeReuseID"
-    
+
     // MARK: Variables
     public var imagePaths : [String] = []
     public var selectDelegate : MVCarouselCollectionViewDelegate?
     public var currentPageIndex : Int = 0
     public var maximumZoom : Double = 0.0
-    
+
     // Default clousure used to load images
     public var commonImageLoader: MVImageLoaderClosure?
 
@@ -54,29 +54,29 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
     // MARK: Initialisation
     override public func awakeFromNib() {
         super.awakeFromNib()
-    
+
         self.delegate = self
         self.dataSource = self
-        
+
         // Loading bundle from class, see: http://stackoverflow.com/questions/25138989/uicollectionview-nib-from-a-framework-target-registered-as-a-cell-fails-at-runt
         let bundle = NSBundle(forClass: MVCarouselCell.self)
         var nib = UINib(nibName : "MVCarouselCell", bundle: bundle)
         self.registerNib(nib, forCellWithReuseIdentifier: self.reuseID)
     }
-    
+
     // MARK: UICollectionViewDataSource
     public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.imagePaths.count
     }
-    
+
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
         // Should be set at this point
         assert(commonImageLoader != nil)
-        
+
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseID, forIndexPath: indexPath) as MVCarouselCell
         cell.cellSize = self.bounds.size
-        
+
         // Pass the closure to the cell
         let imagePath = self.imagePaths[indexPath.row]
         var loader = self.selectDelegate?.imageLoaderForCell?(atIndexPath: indexPath, imagePath: imagePath)
@@ -84,7 +84,7 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
         // Set image path, which will call closure
         cell.imagePath = imagePath
         cell.maximumZoom = maximumZoom
-        
+
         // http://stackoverflow.com/questions/16960556/how-to-zoom-a-uiscrollview-inside-of-a-uicollectionviewcell
         if let gestureRecognizer = cell.scrollView.pinchGestureRecognizer {
             self.addGestureRecognizer(gestureRecognizer)
@@ -92,36 +92,36 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
         if let gestureRecognizer = cell.scrollView?.panGestureRecognizer {
             self.addGestureRecognizer(gestureRecognizer)
         }
-    
+
         return cell
     }
-    
+
     public func collectionView(collectionView : UICollectionView, didEndDisplayingCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
 
-        if let mcell = cell as? MVCarouselCell {
+        if let cell = cell as? MVCarouselCell {
             // http://stackoverflow.com/questions/16960556/how-to-zoom-a-uiscrollview-inside-of-a-uicollectionviewcell
-            if let gestureRecognizer = mcell.scrollView?.pinchGestureRecognizer {
+            if let gestureRecognizer = cell.scrollView?.pinchGestureRecognizer {
                 self.removeGestureRecognizer(gestureRecognizer)
             }
-            if let gestureRecognizer = mcell.scrollView?.panGestureRecognizer {
+            if let gestureRecognizer = cell.scrollView?.panGestureRecognizer {
                 self.removeGestureRecognizer(gestureRecognizer)
             }
         }
     }
-    
+
     // MARK: UICollectionViewDelegateFlowLayout
     public func collectionView(collectionView : UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    
+
         return self.superview!.bounds.size
     }
-    
+
     public func collectionView(collectionView : UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        self.selectDelegate?.didSelectCellAtIndexPath(indexPath)
+        self.selectDelegate?.carousel(self, didSelectCellAtIndexPath: indexPath)
     }
 
     // MARK: UIScrollViewDelegate
     public func scrollViewDidScroll(scrollView: UIScrollView) {
-    
+
         if scrollView == self {
             if !self.clientDidRequestScroll {
                 self.updatePageIndex()
@@ -129,31 +129,31 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
         }
     }
     public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        
+
         if scrollView == self {
             self.clientDidRequestScroll = false
             self.updatePageIndex()
         }
     }
     public func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
-        
+
         if scrollView == self {
             self.clientDidRequestScroll = false
             self.updatePageIndex()
         }
     }
-    
+
     public func updatePageIndex() {
         var pageIndex = self.getPageNumber()
         if currentPageIndex != pageIndex {
 //            println("old page: \(currentPageIndex), new page: \(pageIndex)")
             currentPageIndex = pageIndex
-            self.selectDelegate?.didScrollToCellAtIndex(pageIndex)
+            self.selectDelegate?.carousel(self, didScrollToCellAtIndex: pageIndex)
         }
     }
-    
+
     public func getPageNumber() -> NSInteger {
-        
+
         // http://stackoverflow.com/questions/4132993/getting-the-current-page
         var width : CGFloat = self.frame.size.width
         var page : NSInteger = NSInteger((self.contentOffset.x + (CGFloat(0.5) * width)) / width)
@@ -166,11 +166,11 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
         }
         return page
     }
-    
+
     public func setCurrentPageIndex(pageIndex: Int, animated: Bool) {
         self.currentPageIndex = pageIndex
         self.clientDidRequestScroll = true;
-        
+
         var indexPath = NSIndexPath(forRow: currentPageIndex, inSection: 0)
         self.scrollToItemAtIndexPath(indexPath, atScrollPosition:UICollectionViewScrollPosition.CenteredHorizontally, animated:true)
     }

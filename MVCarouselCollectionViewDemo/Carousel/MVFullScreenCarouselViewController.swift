@@ -64,14 +64,14 @@ class MVFullScreenCarouselViewController: UIViewController, MVCarouselCollection
     }
     
     // MARK: MVCarouselCollectionViewDelegate
-    func didSelectCellAtIndexPath(indexPath : NSIndexPath) {
-        
+    func carousel(carousel: MVCarouselCollectionView, didSelectCellAtIndexPath indexPath: NSIndexPath) {
+
         self.delegate?.willCloseWithSelectedIndexPath(indexPath)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    func didScrollToCellAtIndex(pageIndex : NSInteger) {
-        
+
+    func carousel(carousel: MVCarouselCollectionView, didScrollToCellAtIndex cellIndex : NSInteger) {
+
         //DLogInfo(@"new page: %ld", (unsigned long)pageIndex);
     }
 

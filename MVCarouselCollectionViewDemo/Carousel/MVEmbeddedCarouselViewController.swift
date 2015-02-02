@@ -70,15 +70,15 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
     }
     
     // MARK:  MVCarouselCollectionViewDelegate
-    func didSelectCellAtIndexPath(indexPath : NSIndexPath) {
-    
+    func carousel(carousel: MVCarouselCollectionView, didSelectCellAtIndexPath indexPath: NSIndexPath) {
+
         // Send indexPath.row as index to use
         self.performSegueWithIdentifier("FullScreenSegue", sender:indexPath);
     }
-    
-    func didScrollToCellAtIndex(pageIndex: NSInteger) {
-    
-        self.pageControl.currentPage = pageIndex
+
+    func carousel(carousel: MVCarouselCollectionView, didScrollToCellAtIndex cellIndex : NSInteger) {
+
+        self.pageControl.currentPage = cellIndex
     }
     
     // MARK: IBActions
