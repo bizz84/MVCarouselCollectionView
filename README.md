@@ -11,7 +11,7 @@ Features
 -------------------------------------------------------
 
 - Horizontal-scrolling carousel with pinch & zoom capabilities
-- Works both with local and remote images 
+- Synchronous or asynchronous image loading (works with local or remote images)
 - Embedded or full-screen mode
 
 Installation
@@ -26,8 +26,9 @@ pod 'MVCarouselCollectionView'
 Alternatively, you can install this as a git submodule by following these steps:
 
 * git submodule add https://github.com/bizz84/MVCarouselCollectionView.git
-* Drag the MVCarouselCollectionView.xcodeproj file into your XCode project
+* Drag the MVCarouselCollectionView.xcodeproj file into your XCode project (XCode will ask to create a workspace file if your project does not have one already)
 * Under the main app target, open the **General tab** and add MVCarouselCollectionView under the **Embedded Binaries** section
+* Build the MVCarouselCollectionView target
 
 Usage
 -------------------------------------------------------
@@ -38,9 +39,9 @@ Below is a sample implementation of a view controller using MVCarouselCollection
 class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate {
 
     // Local images
-    var imagePaths : [ "image1.png", "image2.png", "image3.png" ]
+    let imagePaths = [ "image1.png", "image2.png", "image3.png" ]
     // Closure to load local images with UIImage.named
-    var imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ()) = {
+    let imageLoader: ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ()) = {
       (imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) in
 
         imageView.image = UIImage(named:imagePath)
