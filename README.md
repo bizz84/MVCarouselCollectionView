@@ -35,7 +35,7 @@ Usage
 
 Below is a sample implementation of a view controller using MVCarouselCollectionView. See the demo application for a more advanced usage example.
 
-<pre>
+```swift
 class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate {
 
     // Local images
@@ -49,13 +49,13 @@ class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate
     }
 
     @IBOutlet var collectionView : MVCarouselCollectionView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureCollectionView()
     }
-    
+
     func configureCollectionView() {
     
         collectionView.selectDelegate = self
@@ -75,7 +75,14 @@ class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate
         // Page changed, can use this to update page control
     }
 }
-</pre>
+```
+
+Configuration
+-------------------------------------------------------
+MVCarouselCollectionView was designed to be used with paging enabled. Please ensure the following properties are set:
+* Paging Enabled = true
+* Min spacing between cells = 0
+* Min spacing between lines = 0
 
 Requirements
 -------------------------------------------------------
