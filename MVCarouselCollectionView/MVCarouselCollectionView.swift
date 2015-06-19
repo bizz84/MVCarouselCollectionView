@@ -74,7 +74,7 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
         // Should be set at this point
         assert(commonImageLoader != nil)
 
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseID, forIndexPath: indexPath) as MVCarouselCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseID, forIndexPath: indexPath) as! MVCarouselCell
         cell.cellSize = self.bounds.size
 
         // Pass the closure to the cell

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'MVCarouselCollectionView'
-  s.version      = '1.0.3'
+  s.version      = '1.0.4'
   s.summary      = 'UICollectionView-based image carousel written in Swift'
   s.license      = 'MIT'
   s.homepage     = 'https://github.com/bizz84/MVCarouselCollectionView'

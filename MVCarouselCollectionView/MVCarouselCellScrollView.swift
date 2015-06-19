@@ -93,7 +93,7 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
         return maximumZoom < 1.0 ? MaximumZoom : maximumZoom
     }
 
-    func viewForZoomingInScrollView(scrollView : UIScrollView) -> UIView {
+    func viewForZoomingInScrollView(scrollView : UIScrollView) -> UIView? {
         return self.imageView
     }
 }

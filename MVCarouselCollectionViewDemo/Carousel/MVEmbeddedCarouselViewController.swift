@@ -97,9 +97,11 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
             if let vc = vc {
                 vc.imageLoader = self.imageLoader
                 vc.imagePaths = self.imagePaths
-                vc.initialViewIndex = (sender as NSIndexPath).row
                 vc.delegate = self
                 vc.title = self.parentViewController?.navigationItem.title
+                if let indexPath = sender as? NSIndexPath {
+                    vc.initialViewIndex = indexPath.row
+                }
             }
         }
     }

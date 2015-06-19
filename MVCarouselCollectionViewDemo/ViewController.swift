@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         
         var storyboard = UIStoryboard(name: "CarouselStoryboard", bundle: nil)
-        var vc : MVEmbeddedCarouselViewController = storyboard.instantiateInitialViewController() as MVEmbeddedCarouselViewController
+        var vc : MVEmbeddedCarouselViewController = storyboard.instantiateInitialViewController() as! MVEmbeddedCarouselViewController
 
 //        vc.imageLoader = imageViewLoadCached
 //        vc.imagePaths = [ "MyOyster", "CameraCube", "PixelPicker", "PerfectGrid" ]
