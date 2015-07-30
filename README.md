@@ -86,7 +86,8 @@ MVCarouselCollectionView was designed to be used with paging enabled. Please ens
 
 Requirements
 -------------------------------------------------------
-MVCarouselCollectionView was tested under XCode 6.1 and requires iOS 8.0 or greater.
+- MVCarouselCollectionView is compatible with Swift 1.2 and was tested under XCode 6.x. 
+- iOS 8.0 or greater is supported.
 
 
 License
