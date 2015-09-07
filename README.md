@@ -91,6 +91,7 @@ Requirements
 -------------------------------------------------------
 - MVCarouselCollectionView is compatible with Swift 1.2 and was tested under XCode 6.x. 
 - iOS 8.0 or greater is supported.
+- To run with Swift 2.0 and Xcode 7.0, please switch to the [swift-2.0 branch](https://github.com/bizz84/MVCarouselCollectionView/tree/swift-2.0). Once Xcode 7.0 becomes the official release, this branch will be merged back into master.
 
 
 License
