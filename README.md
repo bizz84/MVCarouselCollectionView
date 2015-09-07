@@ -36,6 +36,8 @@ Usage
 Below is a sample implementation of a view controller using MVCarouselCollectionView. See the demo application for a more advanced usage example.
 
 ```swift
+import MVCarouselCollectionView
+
 class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate {
 
     // Local images
