@@ -108,6 +108,8 @@
 		654A75831A78DE8D00F0E6D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Muse Visions";
 				TargetAttributes = {

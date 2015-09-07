@@ -60,7 +60,7 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
 
         // Loading bundle from class, see: http://stackoverflow.com/questions/25138989/uicollectionview-nib-from-a-framework-target-registered-as-a-cell-fails-at-runt
         let bundle = NSBundle(forClass: MVCarouselCell.self)
-        var nib = UINib(nibName : "MVCarouselCell", bundle: bundle)
+        let nib = UINib(nibName : "MVCarouselCell", bundle: bundle)
         self.registerNib(nib, forCellWithReuseIdentifier: self.reuseID)
     }
 
@@ -79,7 +79,7 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
 
         // Pass the closure to the cell
         let imagePath = self.imagePaths[indexPath.row]
-        var loader = self.selectDelegate?.imageLoaderForCell?(atIndexPath: indexPath, imagePath: imagePath)
+        let loader = self.selectDelegate?.imageLoaderForCell?(atIndexPath: indexPath, imagePath: imagePath)
         cell.imageLoader = loader != nil ? loader : self.commonImageLoader
         // Set image path, which will call closure
         cell.imagePath = imagePath
@@ -144,7 +144,7 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
     }
 
     public func updatePageIndex() {
-        var pageIndex = self.getPageNumber()
+        let pageIndex = self.getPageNumber()
         if currentPageIndex != pageIndex {
 //            println("old page: \(currentPageIndex), new page: \(pageIndex)")
             currentPageIndex = pageIndex
@@ -155,9 +155,9 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
     public func getPageNumber() -> NSInteger {
 
         // http://stackoverflow.com/questions/4132993/getting-the-current-page
-        var width : CGFloat = self.frame.size.width
+        let width : CGFloat = self.frame.size.width
         var page : NSInteger = NSInteger((self.contentOffset.x + (CGFloat(0.5) * width)) / width)
-        var numPages = self.numberOfItemsInSection(0)
+        let numPages = self.numberOfItemsInSection(0)
         if page < 0 {
             page = 0
         }
@@ -171,7 +171,7 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
         self.currentPageIndex = pageIndex
         self.clientDidRequestScroll = true;
 
-        var indexPath = NSIndexPath(forRow: currentPageIndex, inSection: 0)
+        let indexPath = NSIndexPath(forRow: currentPageIndex, inSection: 0)
         self.scrollToItemAtIndexPath(indexPath, atScrollPosition:UICollectionViewScrollPosition.CenteredHorizontally, animated:true)
     }
 

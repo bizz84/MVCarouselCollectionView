@@ -92,8 +92,8 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
     
         if segue.identifier == "FullScreenSegue" {
         
-            var nc = segue.destinationViewController as? UINavigationController
-            var vc = nc?.viewControllers[0] as? MVFullScreenCarouselViewController
+            let nc = segue.destinationViewController as? UINavigationController
+            let vc = nc?.viewControllers[0] as? MVFullScreenCarouselViewController
             if let vc = vc {
                 vc.imageLoader = self.imageLoader
                 vc.imagePaths = self.imagePaths
