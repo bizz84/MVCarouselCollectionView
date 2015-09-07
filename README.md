@@ -58,6 +58,7 @@ class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate
 
     func configureCollectionView() {
     
+        // NOTE: the collectionView IBOutlet class must be declared as MVCarouselCollectionView in Interface Builder, otherwise this will crash.
         collectionView.selectDelegate = self
         collectionView.imagePaths = imagePaths
         collectionView.commonImageLoader = self.imageLoader
