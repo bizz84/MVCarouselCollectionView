@@ -177,7 +177,7 @@ public class MVCarouselCollectionView: UICollectionView, UICollectionViewDataSou
 
 
     public func resetZoom() {
-        for cell in self.visibleCells() {
+        for cell in self.visibleCells() as! [MVCarouselCell] {
             cell.resetZoom()
         }
     }
