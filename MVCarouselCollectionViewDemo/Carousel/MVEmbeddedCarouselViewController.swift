@@ -36,7 +36,7 @@ class MVEmbeddedCarouselViewController: UIViewController, MVCarouselCollectionVi
 
         // Do any additional setup after loading the view.
        
-        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.translatesAutoresizingMaskIntoConstraints = false
 
         self.pageControl.numberOfPages = imagePaths.count
         // Configure collection view
