@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B33AE23E2ED9B99E8045690 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9EBC25E2AD39AE8ADAA403 /* libPods.a */; };
 		654A75AC1A78DF2000F0E6D2 /* MVCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A75A81A78DF2000F0E6D2 /* MVCarouselCell.swift */; };
 		654A75AD1A78DF2000F0E6D2 /* MVCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654A75A91A78DF2000F0E6D2 /* MVCarouselCell.xib */; };
 		654A75AE1A78DF2000F0E6D2 /* MVCarouselCellScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A75AA1A78DF2000F0E6D2 /* MVCarouselCellScrollView.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55281CDEE9541924F68E5F5B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		654A758C1A78DE8D00F0E6D2 /* MVCarouselCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MVCarouselCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654A75901A78DE8D00F0E6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654A75911A78DE8D00F0E6D2 /* MVCarouselCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCarouselCollectionView.h; sourceTree = "<group>"; };
@@ -21,6 +23,8 @@
 		654A75A91A78DF2000F0E6D2 /* MVCarouselCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVCarouselCell.xib; sourceTree = "<group>"; };
 		654A75AA1A78DF2000F0E6D2 /* MVCarouselCellScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCellScrollView.swift; sourceTree = "<group>"; };
 		654A75AB1A78DF2000F0E6D2 /* MVCarouselCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCarouselCollectionView.swift; sourceTree = "<group>"; };
+		6C9EBC25E2AD39AE8ADAA403 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC7D1CEC22DD14678137E2ED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B33AE23E2ED9B99E8045690 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,8 @@
 			children = (
 				654A758E1A78DE8D00F0E6D2 /* MVCarouselCollectionView */,
 				654A758D1A78DE8D00F0E6D2 /* Products */,
+				E3376E6E9079D44B1BBCEEAB /* Pods */,
+				765B6576EFCD65142D1ABA45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		765B6576EFCD65142D1ABA45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C9EBC25E2AD39AE8ADAA403 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3376E6E9079D44B1BBCEEAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC7D1CEC22DD14678137E2ED /* Pods.debug.xcconfig */,
+				55281CDEE9541924F68E5F5B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -88,10 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 654A75A21A78DE8E00F0E6D2 /* Build configuration list for PBXNativeTarget "MVCarouselCollectionView" */;
 			buildPhases = (
+				9B2DBB004D007E4FCEAA4FD8 /* Check Pods Manifest.lock */,
 				654A75871A78DE8D00F0E6D2 /* Sources */,
 				654A75881A78DE8D00F0E6D2 /* Frameworks */,
 				654A75891A78DE8D00F0E6D2 /* Headers */,
 				654A758A1A78DE8D00F0E6D2 /* Resources */,
+				474E995EAB2666EF91852578 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +171,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		474E995EAB2666EF91852578 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B2DBB004D007E4FCEAA4FD8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		654A75871A78DE8D00F0E6D2 /* Sources */ = {
@@ -247,6 +306,7 @@
 		};
 		654A75A31A78DE8E00F0E6D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC7D1CEC22DD14678137E2ED /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -266,6 +326,7 @@
 		};
 		654A75A41A78DE8E00F0E6D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55281CDEE9541924F68E5F5B /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;

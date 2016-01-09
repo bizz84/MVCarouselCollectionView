@@ -19,6 +19,7 @@
 		6523A0EA1A5E7D3300D6CDA4 /* Carousel.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0D91A5E7D3300D6CDA4 /* Carousel.xcassets */; };
 		6523A0EB1A5E7D3300D6CDA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6523A0DA1A5E7D3300D6CDA4 /* Images.xcassets */; };
 		6523A0ED1A5E7D3300D6CDA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6523A0DD1A5E7D3300D6CDA4 /* ViewController.swift */; };
+		65F3FB451C40F6EB00634C6D /* MVCarouselCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F3FB441C40F6EB00634C6D /* MVCarouselCollectionView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +39,7 @@
 		6523A0DC1A5E7D3300D6CDA4 /* MVCarouselCollectionView-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVCarouselCollectionView-Bridging-Header.h"; sourceTree = "<group>"; };
 		6523A0DD1A5E7D3300D6CDA4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		657E120C1A78E907002A9756 /* MVCarouselCollectionView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MVCarouselCollectionView.framework; path = "build/Debug-iphoneos/MVCarouselCollectionView.framework"; sourceTree = "<group>"; };
-		657E12101A78EDB3002A9756 /* MVCarouselCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = MVCarouselCollectionView.framework; path = "/Users/andrea/Library/Developer/Xcode/DerivedData/MVCarouselCollectionView-hevqzyvpbpgcybchulwjdqgqlvfb/Build/Products/Debug-iphoneos/MVCarouselCollectionView.framework"; sourceTree = "<absolute>"; };
+		65F3FB441C40F6EB00634C6D /* MVCarouselCollectionView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MVCarouselCollectionView.framework; path = "build/Debug-iphoneos/MVCarouselCollectionView.framework"; sourceTree = "<group>"; };
 		C8DC4600873CA775489EEB8F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E299D0688AD3C378D7F15DB1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F3FB451C40F6EB00634C6D /* MVCarouselCollectionView.framework in Frameworks */,
 				3EDEE2188EC943887F3A491C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +60,6 @@
 		651A74741A38D09E00FD6EB4 = {
 			isa = PBXGroup;
 			children = (
-				657E12101A78EDB3002A9756 /* MVCarouselCollectionView.framework */,
 				6523A0C81A5E7CD700D6CDA4 /* MVCarouselCollectionViewDemo */,
 				651A747E1A38D09E00FD6EB4 /* Products */,
 				B06A1B266C1EC04B2B6A1E82 /* Pods */,
@@ -122,6 +123,7 @@
 		C20030B4EA39EA34D55AC518 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65F3FB441C40F6EB00634C6D /* MVCarouselCollectionView.framework */,
 				657E120C1A78E907002A9756 /* MVCarouselCollectionView.framework */,
 				C8DC4600873CA775489EEB8F /* libPods.a */,
 			);
