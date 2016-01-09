@@ -11,14 +11,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-bD-wC3" customClass="MVCarouselCellScrollView" customModule="MVCarouselCollectionView">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-bD-wC3" customClass="MVCarouselCellScrollView" customModule="MVCarouselCollectionView">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pey-Zt-VKe">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pey-Zt-VKe">
                             <constraints>
                                 <constraint firstAttribute="height" id="Uyb-Bs-mDb"/>
                                 <constraint firstAttribute="width" id="azf-WB-O7i"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Uyb-Bs-mDb"/>
+                                    <exclude reference="azf-WB-O7i"/>
+                                </mask>
+                            </variation>
                         </imageView>
                     </subviews>
                     <constraints>
