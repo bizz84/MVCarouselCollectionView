@@ -87,6 +87,7 @@ class CarouselViewController: UIViewController, MVCarouselCollectionViewDelegate
 
 ## Configuration
 MVCarouselCollectionView was designed to be used with paging enabled. Please ensure the following properties are set:
+
 * Paging Enabled = true
 * Min spacing between cells = 0
 * Min spacing between lines = 0
@@ -95,12 +96,12 @@ MVCarouselCollectionView was designed to be used with paging enabled. Please ens
 The demo app is only known to work well in portrait mode. Interface rotation / size classes changes are not properly supported.
 
 ## Requirements
-- MVCarouselCollectionView is compatible with Swift 2.0 and was tested under XCode 7.x. 
+- MVCarouselCollectionView is compatible with Swift 2.0 and was tested under XCode 7.2. 
 - iOS 8.0 or greater is supported.
 - For Swift 1.2 / Xcode 6.x support, please use the older pod: ```pod 'MVCarouselCollectionView', '1.0.5'```
 
 ## License
-Copyright (c) 2015 Andrea Bizzotto bizz84@gmail.com
+Copyright (c) 2015-2016 Andrea Bizzotto bizz84@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
