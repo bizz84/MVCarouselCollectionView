@@ -23,7 +23,7 @@ UICollectionView-based image carousel written in Swift
 
 ## Installation
 
-If you are using Cocoapods, simply add the line below to your Podfile, then type 'pod install':
+If you are using CocoaPods, simply add the line below to your Podfile, then type 'pod install':
 
 <pre>
 pod 'MVCarouselCollectionView'
