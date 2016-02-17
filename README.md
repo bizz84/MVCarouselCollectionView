@@ -32,7 +32,7 @@ pod 'MVCarouselCollectionView'
 Alternatively, you can install this as a git submodule by following these steps:
 
 * git submodule add https://github.com/bizz84/MVCarouselCollectionView.git
-* Drag the MVCarouselCollectionView.xcodeproj file into your XCode project (XCode will ask to create a workspace file if your project does not have one already)
+* Drag the MVCarouselCollectionView.xcodeproj file into your Xcode project (Xcode will ask to create a workspace file if your project does not have one already)
 * Under the main app target, open the **General tab** and add MVCarouselCollectionView under the **Embedded Binaries** section
 * Build the MVCarouselCollectionView target
 
@@ -96,7 +96,7 @@ MVCarouselCollectionView was designed to be used with paging enabled. Please ens
 The demo app is only known to work well in portrait mode. Interface rotation / size classes changes are not properly supported.
 
 ## Requirements
-- MVCarouselCollectionView is compatible with Swift 2.0 and was tested under XCode 7.2. 
+- MVCarouselCollectionView is compatible with Swift 2.0 and was tested under Xcode 7.2. 
 - iOS 8.0 or greater is supported.
 - For Swift 1.2 / Xcode 6.x support, please use the older pod: ```pod 'MVCarouselCollectionView', '1.0.5'```
 
