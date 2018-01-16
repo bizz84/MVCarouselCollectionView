@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,10 +15,11 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-bD-wC3" customClass="MVCarouselCellScrollView" customModule="MVCarouselCollectionView">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-bD-wC3" customClass="MVCarouselCellScrollView" customModule="MVCarouselCollectionView">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pey-Zt-VKe">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pey-Zt-VKe">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             <constraints>
                                 <constraint firstAttribute="height" id="Uyb-Bs-mDb"/>
                                 <constraint firstAttribute="width" id="azf-WB-O7i"/>
@@ -30,21 +35,24 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Pey-Zt-VKe" secondAttribute="bottom" id="LPd-LF-t6b"/>
                         <constraint firstAttribute="trailing" secondItem="Pey-Zt-VKe" secondAttribute="trailing" id="lem-qo-oGC"/>
+                        <constraint firstItem="Pey-Zt-VKe" firstAttribute="centerY" secondItem="bSM-bD-wC3" secondAttribute="centerY" id="lt4-hu-WZz"/>
                         <constraint firstItem="Pey-Zt-VKe" firstAttribute="leading" secondItem="bSM-bD-wC3" secondAttribute="leading" id="oLf-jy-Y3M"/>
                         <constraint firstItem="Pey-Zt-VKe" firstAttribute="top" secondItem="bSM-bD-wC3" secondAttribute="top" id="qcI-xQ-iYt"/>
+                        <constraint firstItem="Pey-Zt-VKe" firstAttribute="centerX" secondItem="bSM-bD-wC3" secondAttribute="centerX" id="tbR-az-lNt"/>
                     </constraints>
                     <connections>
                         <outlet property="imageView" destination="Pey-Zt-VKe" id="peH-Md-aPV"/>
                     </connections>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="bSM-bD-wC3" secondAttribute="bottom" id="B75-M8-A7w"/>
                 <constraint firstAttribute="trailing" secondItem="bSM-bD-wC3" secondAttribute="trailing" id="F7E-3S-4Fs"/>
                 <constraint firstItem="bSM-bD-wC3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HX3-7V-bLQ"/>
                 <constraint firstItem="bSM-bD-wC3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zh9-zI-DLe"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="scrollView" destination="bSM-bD-wC3" id="5hx-En-8dS"/>
             </connections>

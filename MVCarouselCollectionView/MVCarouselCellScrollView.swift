@@ -23,18 +23,18 @@
 import UIKit
 
 // Image loader closure type
-public typealias MVImageLoaderClosure = ((imageView: UIImageView, imagePath : String, completion: (newImage: Bool) -> ()) -> ())
+public typealias MVImageLoaderClosure = ((_ imageView: UIImageView, _ imagePath : String, _ completion: (_ newImage: Bool) -> ()) -> ())
 
 class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
-
+    
     let MaximumZoom = 4.0
     
-    var cellSize : CGSize = CGSizeZero
+    var cellSize : CGSize = .zero
     var maximumZoom = 0.0
     var imagePath : String = "" {
         didSet {
             assert(self.imageLoader != nil, "Image loader must be specified")
-            self.imageLoader?(imageView : self.imageView, imagePath: imagePath, completion: {
+            self.imageLoader?(self.imageView, imagePath, {
                 (newImage) in
                 self.resetZoom()
             })
@@ -43,14 +43,14 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
     var imageLoader: MVImageLoaderClosure?
     
     @IBOutlet weak private var imageView : UIImageView!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.delegate = self
-        self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.imageView.contentMode = .scaleAspectFit
     }
-
+    
     func resetZoom() {
         if self.imageView.image == nil {
             return
@@ -58,14 +58,14 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
         let imageSize = self.imageView.image!.size
         
         // nothing to do if image is not set
-        if CGSizeEqualToSize(imageSize, CGSizeZero) {
+        if imageSize.equalTo(.zero) {
             return
         }
         
         // Stack overflow people suggest this, not sure if it applies to us
-        self.imageView.contentMode = UIViewContentMode.Center
+        self.imageView.contentMode = UIViewContentMode.center
         if cellSize.width > imageSize.width && cellSize.height > imageSize.height {
-            self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
+            self.imageView.contentMode = .scaleAspectFit
         }
         
         let cellAspectRatio : CGFloat = self.cellSize.width / self.cellSize.height
@@ -85,14 +85,14 @@ class MVCarouselCellScrollView: UIScrollView, UIScrollViewDelegate {
         let horzContentInset = cellAspectRatioWiderThanImage ? 0.5 * (cellSize.width - adjustedContentWidth) : 0.0
         let adjustedContentHeight = cellSize.width / imageAspectRatio
         let vertContentInset = !cellAspectRatioWiderThanImage ? 0.5 * (cellSize.height - adjustedContentHeight) : 0.0
-    
+        
         self.contentInset = UIEdgeInsetsMake(vertContentInset, horzContentInset, vertContentInset, horzContentInset)
     }
     
     func zoomToUse() -> Double {
         return maximumZoom < 1.0 ? MaximumZoom : maximumZoom
     }
-
+    
     func viewForZoomingInScrollView(scrollView : UIScrollView) -> UIView? {
         return self.imageView
     }
